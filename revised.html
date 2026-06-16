@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>事業計画書 改訂版：養豚プロジェクト / Revised Piggery Proposal</title>
+<style>
+  :root{
+    --bg:#f8fafc; --card:#ffffff; --ink:#1e293b; --muted:#64748b;
+    --line:#e2e8f0; --accent:#e11d48; --accent-soft:#fff1f2;
+    --jp:#0f766e; --jp-soft:#f0fdfa; --gold:#b45309; --gold-soft:#fffbeb;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Segoe UI",Roboto,sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.7;
+    padding:24px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:900px;margin:0 auto}
+  header{
+    background:linear-gradient(135deg,#0f766e,#0d5d56); color:#fff;
+    border-radius:20px; padding:40px 32px; margin-bottom:24px;
+    box-shadow:0 10px 30px rgba(15,118,110,.25);
+  }
+  header .emoji{font-size:48px;display:block;margin-bottom:12px}
+  header h1{font-size:26px;font-weight:800;margin-bottom:6px;line-height:1.4}
+  header h2{font-size:16px;font-weight:500;opacity:.92}
+  header .badge{display:inline-block;background:#b45309;color:#fff;font-size:12px;font-weight:700;padding:5px 12px;border-radius:6px;margin-bottom:14px;letter-spacing:.5px}
+  header .meta{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px}
+  header .pill{background:rgba(255,255,255,.2);padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;backdrop-filter:blur(4px)}
+  .toggle{display:flex;gap:8px;justify-content:center;margin-bottom:24px;position:sticky;top:12px;z-index:50}
+  .toggle button{flex:1;max-width:200px;padding:12px 20px;border:none;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+  .toggle button.active{background:var(--ink);color:#fff;transform:translateY(-1px)}
+  .toggle button:not(.active){background:#fff;color:var(--muted)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;margin-bottom:18px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+  .card h3{font-size:19px;font-weight:800;margin-bottom:14px;color:var(--ink);padding-bottom:10px;border-bottom:2px solid var(--jp-soft);display:flex;align-items:center;gap:10px}
+  .card h3 .num{background:var(--jp);color:#fff;width:30px;height:30px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+  .card p{margin-bottom:12px;color:#334155}
+  .card ul{list-style:none;margin:8px 0}
+  .card li{padding:6px 0 6px 26px;position:relative;color:#334155}
+  .card li::before{content:"▸";position:absolute;left:6px;color:var(--jp);font-weight:700}
+  .kv{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+  .kv .item{background:var(--jp-soft);border-radius:10px;padding:10px 16px;flex:1;min-width:160px}
+  .kv .item .label{font-size:12px;color:var(--muted);font-weight:600;margin-bottom:2px}
+  .kv .item .val{font-size:15px;font-weight:800;color:var(--jp)}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+  th,td{text-align:left;padding:10px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:var(--jp-soft);font-weight:700;color:var(--jp)}
+  td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
+  tr.total td{font-weight:800;color:var(--ink);border-top:2px solid var(--jp);background:#fafafa}
+  tr.new td:first-child::after{content:" 🆕";font-size:11px}
+  .highlight{background:var(--jp-soft);border-left:4px solid var(--jp);border-radius:8px;padding:14px 18px;margin:14px 0}
+  .highlight .big{font-size:20px;font-weight:800;color:var(--jp)}
+  .danger{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:8px;padding:14px 18px;margin:14px 0}
+  .danger strong{color:var(--accent)}
+  .gold{background:var(--gold-soft);border-left:4px solid var(--gold);border-radius:8px;padding:14px 18px;margin:14px 0}
+  .gold strong{color:var(--gold)}
+  .phase{display:flex;flex-wrap:wrap;gap:12px;margin:12px 0}
+  .phase .p{flex:1;min-width:220px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
+  .phase .p h4{color:var(--jp);font-size:15px;margin-bottom:8px}
+  .lang-en{display:none}
+  body.show-en .lang-ja{display:none}
+  body.show-en .lang-en{display:block}
+  footer{text-align:center;color:var(--muted);font-size:13px;padding:24px 0 8px;line-height:1.6}
+  @media(max-width:600px){
+    header{padding:28px 22px}header h1{font-size:20px}
+    .card{padding:20px}.toggle button{font-size:13px;padding:10px 12px}
+    table{font-size:12.5px}th,td{padding:8px 8px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="toggle">
+    <button id="btn-ja" class="active" onclick="setLang('ja')">🇯🇵 日本語</button>
+    <button id="btn-en" onclick="setLang('en')">🇬🇧 English</button>
+  </div>
+
+  <header>
+    <span class="emoji">🐷</span>
+    <span class="badge">改訂版 · 投資家向け / REVISED · INVESTOR-READY</span>
+    <div class="lang-ja">
+      <h1>事業計画書 ― 養豚プロジェクト</h1>
+      <h2>Kawai's Piggery · Bulabod, Malinao, Aklan, フィリピン</h2>
+    </div>
+    <div class="lang-en">
+      <h1>Business Proposal — Piggery Project</h1>
+      <h2>Kawai's Piggery · Bulabod, Malinao, Aklan, Philippines</h2>
+    </div>
+    <div class="meta">
+      <span class="pill">💰 資本 ₱2,000,000</span>
+      <span class="pill">🐖 40–60頭（拡張可）</span>
+      <span class="pill">📅 段階出資・月次報告</span>
+    </div>
+  </header>
+
+  <!-- I. Executive Summary -->
+  <div class="card">
+    <h3><span class="num">I</span><span class="lang-ja">エグゼクティブサマリー</span><span class="lang-en">Executive Summary</span></h3>
+    <div class="lang-ja">
+      <p>本改訂版は、Aklan州における資本投資 <strong>₱2,000,000</strong> の中規模養豚事業計画です。元の構想（フィリピンの豚肉需要は安定＝堅実）は妥当ですが、本版は初稿の<strong>3つの弱点</strong>を修正しました：① 楽観的すぎる投資回収主張、② アフリカ豚熱（ASF）対策の欠如、③ キャッシュフロー・リスク分析の欠落。</p>
+      <p>事業はまず<strong>肥育専業（子豚を購入して育てる）</strong>として開始し、早期のキャッシュフローと低リスクを実現。その後、利益を再投資して<strong>第2フェーズで繁殖母豚を追加</strong>します。現実的な投資回収は定常状態で<strong>1〜2年ではなく3〜4年</strong>。事業の生死は、本計画で最優先事項として扱う<strong>ASFに対するバイオセキュリティ</strong>にかかっています。</p>
+    </div>
+    <div class="lang-en">
+      <p>This revised proposal establishes a medium-scale piggery in Aklan with a capital investment of <strong>₱2,000,000</strong>. The original concept is sound — pork demand in the Philippines is stable — but this edition corrects three weaknesses in the first draft: an over-optimistic payback claim, the absence of an African Swine Fever (ASF) defense plan, and the lack of cash-flow and risk modeling.</p>
+      <p>The business will start as a <strong>grower-finisher operation (buying weaners)</strong> for faster cash flow and lower risk, then reinvest profits to add breeding sows in Phase 2. Realistic payback is <strong>3–4 years</strong> at steady state, not 1–2. Survival depends primarily on biosecurity against ASF, treated here as the project's top operational priority.</p>
+    </div>
+  </div>
+
+  <!-- II. Business Description -->
+  <div class="card">
+    <h3><span class="num">II</span><span class="lang-ja">事業概要</span><span class="lang-en">Business Description</span></h3>
+    <div class="kv">
+      <div class="item"><div class="label"><span class="lang-ja">事業名</span><span class="lang-en">Name</span></div><div class="val">Kawai's Piggery</div></div>
+      <div class="item"><div class="label"><span class="lang-ja">形態</span><span class="lang-en">Type</span></div><div class="val"><span class="lang-ja">商業（肥育専業→一貫経営）</span><span class="lang-en">Grower-finisher → farrow-to-finish</span></div></div>
+      <div class="item"><div class="label"><span class="lang-ja">所在地</span><span class="lang-en">Location</span></div><div class="val">Bulabod, Malinao, Aklan</div></div>
+      <div class="item"><div class="label"><span class="lang-ja">飼育能力</span><span class="lang-en">Capacity</span></div><div class="val"><span class="lang-ja">40–60頭（拡張可）</span><span class="lang-en">40–60 heads</span></div></div>
+    </div>
+    <p class="lang-ja">排水・換気・衛生設備を備えたコンクリート豚舎。<strong>単一入口で管理されたバイオセキュリティ境界</strong>。廃棄物は浄化槽/バイオガスで管理。地方自治体（LGU）・州獣医局・環境規制に登録・準拠。</p>
+    <p class="lang-en">Concrete pens with drainage, ventilation, and sanitation; controlled single-entry biosecurity perimeter; waste managed via septic/biogas. Registered and compliant with LGU, provincial veterinary, and environmental rules.</p>
+  </div>
+
+  <!-- III. Objectives -->
+  <div class="card">
+    <h3><span class="num">III</span><span class="lang-ja">事業目標（現実的）</span><span class="lang-en">Objectives (Realistic)</span></h3>
+    <ul class="lang-ja">
+      <li><strong>第1フェーズ（0〜6ヶ月）：</strong>収益性のある肥育バッチを運営。運営を習熟し、バイヤーを確保</li>
+      <li><strong>第2フェーズ（6ヶ月〜）：</strong>留保利益で繁殖母豚3〜5頭を導入し、子豚コストを削減</li>
+      <li>群の死亡率を<strong>5%未満</strong>、飼料要求率（FCR）を<strong>2.6〜3.0</strong>に維持</li>
+      <li>定常状態で<strong>3〜4年</strong>の投資回収を達成し、60頭超へ拡張</li>
+    </ul>
+    <ul class="lang-en">
+      <li><strong>Phase 1 (Month 0–6):</strong> run a profitable grower-finisher batch; learn operations; establish buyers</li>
+      <li><strong>Phase 2 (Month 6+):</strong> introduce 3–5 breeder sows funded from retained profit, lowering weaner cost</li>
+      <li>Keep herd mortality below <strong>5%</strong> and FCR at <strong>2.6–3.0</strong></li>
+      <li>Achieve steady-state payback in <strong>3–4 years</strong>, then expand toward 60+ heads</li>
+    </ul>
+  </div>
+
+  <!-- IV. Market Analysis -->
+  <div class="card">
+    <h3><span class="num">IV</span><span class="lang-ja">市場分析</span><span class="lang-en">Market Analysis</span></h3>
+    <p class="lang-ja">豚肉は主要タンパク源で需要は安定。バイヤー：Aklanの生鮮市場、精肉販売業者、レストラン、施設バイヤー。衛生管理・安定品質・直接販売で差別化。裏庭養豚や大規模農場との競争は、信頼性とバイオセキュリティ主導の群健康で緩和。</p>
+    <p class="lang-en">Pork is a staple protein with stable demand. Buyers: local wet markets, meat vendors, restaurants, and institutional buyers in Aklan. Differentiation through sanitation, consistent quality, and direct selling. Competition is mitigated by reliability and biosecurity-driven herd health.</p>
+  </div>
+
+  <!-- V. Phased Production -->
+  <div class="card">
+    <h3><span class="num">V</span><span class="lang-ja">段階的生産戦略</span><span class="lang-en">Phased Production Strategy</span></h3>
+    <div class="lang-ja">
+      <p><strong>なぜ段階的か：</strong>初日から一貫経営（farrow-to-finish）を始めると、初収入が約9〜11ヶ月後まで遅れ、経験のない段階で母豚に資本が固定される。肥育専業なら<strong>4〜5ヶ月で現金が戻り</strong>、先にスキルを構築できる。</p>
+    </div>
+    <div class="lang-en">
+      <p><strong>Why phased:</strong> Starting full farrow-to-finish from day one delays first revenue to ~9–11 months and ties up capital in sows before the operator has experience. Grower-finisher returns cash in 4–5 months and builds skill first.</p>
+    </div>
+    <div class="phase">
+      <div class="p">
+        <h4><span class="lang-ja">第1フェーズ — 肥育専業</span><span class="lang-en">Phase 1 — Grower-Finisher</span></h4>
+        <p style="font-size:13px;margin:0"><span class="lang-ja">時期：0〜6ヶ月<br>頭数：子豚40頭（購入）<br>初収入：約5ヶ月目</span><span class="lang-en">Month 0–6<br>40 weaners (bought-in)<br>First revenue ~Month 5</span></p>
+      </div>
+      <div class="p">
+        <h4><span class="lang-ja">第2フェーズ — 繁殖追加</span><span class="lang-en">Phase 2 — Add Breeding</span></h4>
+        <p style="font-size:13px;margin:0"><span class="lang-ja">時期：6〜18ヶ月<br>頭数：母豚3〜5頭＋種豚/AI<br>子豚：約10〜12ヶ月目</span><span class="lang-en">Month 6–18<br>+3–5 sows, 1 boar / AI<br>Piglets ~Month 10–12</span></p>
+      </div>
+    </div>
+    <p class="lang-ja"><strong>オールイン/オールアウト方式</strong>はバイオセキュリティ上必須：1バッチが一緒に入り一緒に出る。次のバッチ前に豚舎を空にし清掃・消毒。目標出荷体重 90〜110kg（4〜5ヶ月）。</p>
+    <p class="lang-en"><strong>All-in / all-out batching</strong> is mandatory for biosecurity: one batch enters and exits together; pens are emptied, cleaned, and disinfected before the next batch. Target market weight 90–110 kg in 4–5 months.</p>
+  </div>
+
+  <!-- VI. Biosecurity / ASF -->
+  <div class="card" style="border:2px solid var(--accent)">
+    <h3 style="border-bottom-color:var(--accent-soft)"><span class="num" style="background:var(--accent)">VI</span><span class="lang-ja">バイオセキュリティ＆ASF対策 ― 最優先</span><span class="lang-en">Biosecurity & ASF Prevention — Top Priority</span></h3>
+    <div class="danger">
+      <div class="lang-ja"><strong>なぜ譲れないのか：</strong>アフリカ豚熱は2019年以降、フィリピンの小規模養豚場を繰り返し全滅させてきた。40〜60頭規模では、一度の発生＝群と投資の全損を意味する。<strong>治療法は存在せず、予防のみが唯一の手段。</strong></div>
+      <div class="lang-en"><strong>Why this is non-negotiable:</strong> ASF has repeatedly wiped out small Philippine piggeries since 2019. For a 40–60 head farm, one outbreak means total loss of the herd and the investment. There is no treatment — only prevention.</div>
+    </div>
+    <p class="lang-ja"><strong>必須対策：</strong></p>
+    <ul class="lang-ja">
+      <li>周囲フェンス＋単一の管理された入口ゲート。無許可の訪問者は立入禁止</li>
+      <li>ゲートでの足消毒槽＆車両消毒。消毒液は定期交換</li>
+      <li>外部の豚肉・豚肉製品の持ち込み禁止（残飯給餌の禁止）</li>
+      <li>子豚は<strong>ASF清浄・認証農場</strong>からのみ仕入れ。健康証明書を要求</li>
+      <li>新規導入豚は全頭、隔離舎で<strong>最低14日間</strong>隔離してから合流</li>
+      <li>オールイン/オールアウト＋バッチ間の完全清掃・消毒</li>
+      <li>農場専用の衣類・長靴。スタッフは他の養豚場を訪問しない</li>
+      <li><strong>ASFワクチン：</strong>フィリピンで認可ワクチン（例：AVAC ASF Live）が展開中 ― 依存する前に州獣医に最新の入手可否・承認状況を確認</li>
+    </ul>
+    <ul class="lang-en">
+      <li>Perimeter fence + single controlled entry gate; no unauthorized visitors</li>
+      <li>Foot baths & vehicle disinfection at the gate; disinfectant changed regularly</li>
+      <li>No outside pork or pork products on the property (food scraps/swill banned)</li>
+      <li>Source weaners only from <strong>ASF-free, certified farms</strong>; demand health certificates</li>
+      <li>Quarantine pen for all newly arrived stock (<strong>min. 14 days</strong>) before mixing</li>
+      <li>All-in / all-out + full clean-and-disinfect between batches</li>
+      <li>Dedicated farm clothing/boots; staff do not visit other piggeries</li>
+      <li><strong>ASF vaccine:</strong> a licensed vaccine (e.g., AVAC ASF Live) is rolling out — confirm availability/approval with the Provincial Veterinarian before relying on it</li>
+    </ul>
+    <p class="lang-ja" style="margin-top:14px"><strong>発生時の初動（必要になる前に書いておく）：</strong></p>
+    <ul class="lang-ja">
+      <li>病気の動物を即座に隔離。州獣医／BAIホットラインに連絡</li>
+      <li>豚・飼料・人の農場への出入りを全面停止</li>
+      <li>公式の殺処分/処理プロトコルに従う。補償請求のため全て記録</li>
+    </ul>
+    <ul class="lang-en">
+      <li>Isolate sick animals immediately; call the Provincial Veterinarian / BAI hotline</li>
+      <li>Stop all movement of pigs, feed, and people on/off the farm</li>
+      <li>Follow official culling/disposal protocol; document everything for any indemnity claim</li>
+    </ul>
+  </div>
+
+  <!-- VII. Facilities -->
+  <div class="card">
+    <h3><span class="num">VII</span><span class="lang-ja">施設・設備</span><span class="lang-en">Facilities & Equipment</span></h3>
+    <p class="lang-ja">コンクリート豚舎（耐久性・消毒容易）、給餌槽、半自動給水システム、覆い付き飼料保管庫（乾燥・防鼠）、環境負荷と臭気苦情を低減する浄化槽またはバイオガス廃棄物システム。</p>
+    <p class="lang-en">Concrete pens (durable, easy to disinfect), feeding troughs, semi-automatic water system, covered feed storage (dry and rodent-proof), and a septic or biogas waste system to reduce environmental impact and odor complaints.</p>
+  </div>
+
+  <!-- VIII. Budget -->
+  <div class="card">
+    <h3><span class="num">VIII</span><span class="lang-ja">予算配分（₱2,000,000）</span><span class="lang-en">Budget Allocation (₱2,000,000)</span></h3>
+    <table>
+      <thead><tr>
+        <th><span class="lang-ja">項目</span><span class="lang-en">Category</span></th>
+        <th class="r">₱</th>
+        <th><span class="lang-ja">備考</span><span class="lang-en">Notes</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td><span class="lang-ja">土地造成／賃借</span><span class="lang-en">Land prep / lease</span></td><td class="r">150,000</td><td><span class="lang-ja">一回限り</span><span class="lang-en">One-time</span></td></tr>
+        <tr><td><span class="lang-ja">豚舎の建設</span><span class="lang-en">Pig pens</span></td><td class="r">500,000</td><td><span class="lang-ja">第1期・拡張可</span><span class="lang-en">Phase 1</span></td></tr>
+        <tr><td><span class="lang-ja">設備（給餌・給水・保管）</span><span class="lang-en">Equipment</span></td><td class="r">100,000</td><td><span class="lang-ja">一回限り</span><span class="lang-en">One-time</span></td></tr>
+        <tr class="new"><td><span class="lang-ja">バイオセキュリティ設置（柵・足消毒・隔離舎）</span><span class="lang-en">Biosecurity setup</span></td><td class="r">120,000</td><td style="color:var(--accent)"><span class="lang-ja">新規・最重要</span><span class="lang-en">Critical</span></td></tr>
+        <tr><td><span class="lang-ja">初期仕入 子豚40頭 @₱3,500</span><span class="lang-en">40 weaners @₱3,500</span></td><td class="r">140,000</td><td><span class="lang-ja">第1期</span><span class="lang-en">Phase 1</span></td></tr>
+        <tr><td><span class="lang-ja">飼料 初回サイクル（4〜5ヶ月）</span><span class="lang-en">Feed — first cycle</span></td><td class="r">360,000</td><td><span class="lang-ja">最大の経常費</span><span class="lang-en">Largest cost</span></td></tr>
+        <tr><td><span class="lang-ja">獣医・ワクチン・医薬品</span><span class="lang-en">Vet/vaccines/meds</span></td><td class="r">70,000</td><td></td></tr>
+        <tr><td><span class="lang-ja">人件費（6ヶ月）</span><span class="lang-en">Labor (6mo)</span></td><td class="r">120,000</td><td></td></tr>
+        <tr><td><span class="lang-ja">光熱費・雑費</span><span class="lang-en">Utilities/misc</span></td><td class="r">80,000</td><td></td></tr>
+        <tr class="new"><td><span class="lang-ja">許認可・事業登録</span><span class="lang-en">Permits & registration</span></td><td class="r">30,000</td><td style="color:var(--accent)"><span class="lang-ja">新規</span><span class="lang-en">New</span></td></tr>
+        <tr class="new"><td><span class="lang-ja">運転資金バッファ（≈1.5サイクル分飼料）</span><span class="lang-en">Working capital buffer</span></td><td class="r">230,000</td><td style="color:var(--accent)"><span class="lang-ja">新規・資金枯渇防止</span><span class="lang-en">Prevents crunch</span></td></tr>
+        <tr class="new"><td><span class="lang-ja">予備費（疾病・価格ショック）</span><span class="lang-en">Contingency</span></td><td class="r">100,000</td><td style="color:var(--accent)"><span class="lang-ja">新規</span><span class="lang-en">New</span></td></tr>
+        <tr class="total"><td><span class="lang-ja">合計</span><span class="lang-en">TOTAL</span></td><td class="r">2,000,000</td><td></td></tr>
+      </tbody>
+    </table>
+    <div class="highlight">
+      <span class="lang-ja">元の初稿は資本の約45%を一回限りの固定資産に投入し、運転資金の準備がゼロだった。本版は <strong>₱330,000（バッファ＋予備費）</strong>を確保し、1回の悪いサイクルが事業を潰さない設計にした。</span>
+      <span class="lang-en">The original draft put ~45% of capital into one-time fixed assets with no working-capital reserve. This version reserves <strong>₱330,000</strong> (buffer + contingency) so a single bad cycle does not kill the business.</span>
+    </div>
+  </div>
+
+  <!-- IX. Financials -->
+  <div class="card">
+    <h3><span class="num">IX</span><span class="lang-ja">財務予測（正直版）</span><span class="lang-en">Financial Projections (Honest)</span></h3>
+    <p class="lang-ja"><strong>1サイクルの収入</strong> ― 肥育専業・40頭・死亡率5%（38頭販売）</p>
+    <p class="lang-en"><strong>Revenue per cycle</strong> — grower-finisher, 40 head, 5% mortality (38 sold)</p>
+    <table>
+      <tr><td><span class="lang-ja">販売頭数 × 平均体重</span><span class="lang-en">Pigs × avg weight</span></td><td class="r">38 × 100kg = 3,800kg</td></tr>
+      <tr><td><span class="lang-ja">販売単価（標準）</span><span class="lang-en">Selling price</span></td><td class="r">₱180 / kg</td></tr>
+      <tr class="total"><td><span class="lang-ja">総収入／サイクル</span><span class="lang-en">Gross revenue</span></td><td class="r">₱684,000</td></tr>
+    </table>
+    <p class="lang-ja" style="margin-top:12px"><strong>1サイクルのコスト</strong></p>
+    <p class="lang-en" style="margin-top:12px"><strong>Cost per cycle</strong></p>
+    <table>
+      <tr><td><span class="lang-ja">子豚（40頭 @₱3,500）</span><span class="lang-en">Weaners</span></td><td class="r">140,000</td></tr>
+      <tr><td><span class="lang-ja">飼料（約225kg/頭 ×40 @₱35）</span><span class="lang-en">Feed</span></td><td class="r">320,000</td></tr>
+      <tr><td><span class="lang-ja">獣医／医薬品</span><span class="lang-en">Vet/meds</span></td><td class="r">30,000</td></tr>
+      <tr><td><span class="lang-ja">人件費（サイクル毎）</span><span class="lang-en">Labor</span></td><td class="r">50,000</td></tr>
+      <tr><td><span class="lang-ja">光熱費／雑費</span><span class="lang-en">Utilities/misc</span></td><td class="r">20,000</td></tr>
+      <tr class="total"><td><span class="lang-ja">合計コスト／サイクル</span><span class="lang-en">Total cost</span></td><td class="r">560,000</td></tr>
+    </table>
+    <div class="highlight">
+      <div class="big"><span class="lang-ja">純利益／サイクル（標準）≈ ₱124,000</span><span class="lang-en">Net profit/cycle ≈ ₱124,000</span></div>
+      <span class="lang-ja">土地・豚舎・設備の一回限り費用は除く（資本に計上済）。オールイン/オールアウトで年約2バッチ → 第1期の定常純益 ≈ <strong>₱250,000〜360,000/年</strong>。第2期では自家繁殖の子豚が購入分（₱140,000/サイクル）を置き換え上昇。</span>
+      <span class="lang-en">Excludes one-time land/pen/equipment. ~2 batches/yr → steady-state net ≈ <strong>₱250,000–360,000/yr</strong> in Phase 1, rising in Phase 2 as home-bred weaners replace ₱140,000 of purchased stock per cycle.</span>
+    </div>
+
+    <p class="lang-ja" style="margin-top:14px"><strong>価格感度（1サイクル・3,800kg）</strong></p>
+    <p class="lang-en" style="margin-top:14px"><strong>Price sensitivity (per cycle, 3,800kg)</strong></p>
+    <table>
+      <thead><tr><th><span class="lang-ja">販売単価</span><span class="lang-en">Price ₱/kg</span></th><th class="r">₱160</th><th class="r">₱170</th><th class="r">₱180</th><th class="r">₱190</th></tr></thead>
+      <tbody>
+        <tr><td><span class="lang-ja">総収入</span><span class="lang-en">Gross</span></td><td class="r">608,000</td><td class="r">646,000</td><td class="r">684,000</td><td class="r">722,000</td></tr>
+        <tr><td><span class="lang-ja">純利益（コスト₱560k）</span><span class="lang-en">Net (cost ₱560k)</span></td><td class="r">48,000</td><td class="r">86,000</td><td class="r">124,000</td><td class="r">162,000</td></tr>
+      </tbody>
+    </table>
+    <div class="danger">
+      <span class="lang-ja"><strong>損益分岐 ≈ ₱147/kg</strong>（₱560,000 ÷ 3,800kg）。これを下回るとサイクルは赤字。飼料価格が20%上昇すると損益分岐は<strong>≈ ₱164/kg</strong>へ。マージンは薄く、飼料価格と販売価格の規律が生死を分ける。</span>
+      <span class="lang-en"><strong>Break-even ≈ ₱147/kg.</strong> Below this the cycle loses money. If feed prices rise 20%, break-even climbs to ≈ ₱164/kg. Margins are thin — feed and selling price discipline decide survival.</span>
+    </div>
+
+    <p class="lang-ja" style="margin-top:14px"><strong>投資回収</strong></p>
+    <p class="lang-en" style="margin-top:14px"><strong>Payback</strong></p>
+    <table>
+      <thead><tr><th><span class="lang-ja">シナリオ</span><span class="lang-en">Scenario</span></th><th class="r"><span class="lang-ja">年間純益</span><span class="lang-en">Annual net</span></th><th class="r"><span class="lang-ja">₱2M回収</span><span class="lang-en">Payback</span></th></tr></thead>
+      <tbody>
+        <tr><td><span class="lang-ja">悲観（低価格/1.5サイクル）</span><span class="lang-en">Pessimistic</span></td><td class="r">~₱150,000</td><td class="r"><span class="lang-ja">~13年/要再検討</span><span class="lang-en">~13 yrs</span></td></tr>
+        <tr><td><span class="lang-ja">標準（₱180/2サイクル）</span><span class="lang-en">Standard</span></td><td class="r">~₱250,000</td><td class="r"><span class="lang-ja">~5年→第2期で3〜4年</span><span class="lang-en">~5 yrs → 3–4</span></td></tr>
+        <tr><td><span class="lang-ja">楽観（₱190/2.5/第2期）</span><span class="lang-en">Optimistic</span></td><td class="r">~₱450,000</td><td class="r">~3<span class="lang-ja">年</span><span class="lang-en"> yrs</span></td></tr>
+      </tbody>
+    </table>
+    <p class="lang-ja" style="color:var(--muted);font-size:13px">※ 初稿の「1〜2年でROI」という主張はこれらの数字で裏付けられず、撤回・修正した。</p>
+    <p class="lang-en" style="color:var(--muted);font-size:13px">The first-draft claim of "ROI in 1–2 years" is not supported and has been corrected.</p>
+  </div>
+
+  <!-- X. Risk -->
+  <div class="card">
+    <h3><span class="num">X</span><span class="lang-ja">リスク管理</span><span class="lang-en">Risk Management</span></h3>
+    <table>
+      <thead><tr><th><span class="lang-ja">リスク</span><span class="lang-en">Risk</span></th><th><span class="lang-ja">対策</span><span class="lang-en">Mitigation</span></th></tr></thead>
+      <tbody>
+        <tr><td><span class="lang-ja">ASF/疾病（全損リスク）</span><span class="lang-en">ASF / disease</span></td><td><span class="lang-ja">第VI章のバイオセキュリティ；隔離；認証仕入；可能なら保険</span><span class="lang-en">Section VI; quarantine; certified stock; insurance</span></td></tr>
+        <tr><td><span class="lang-ja">飼料価格の高騰</span><span class="lang-en">Feed price spikes</span></td><td><span class="lang-ja">運転資金バッファ；まとめ買いのタイミング；FCR監視</span><span class="lang-en">Buffer; bulk timing; monitor FCR</span></td></tr>
+        <tr><td><span class="lang-ja">販売価格が₱147/kg未満に下落</span><span class="lang-en">Price drop &lt;₱147/kg</span></td><td><span class="lang-ja">直接バイヤー/契約；販売時期の柔軟性；コスト管理</span><span class="lang-en">Direct buyers; flexible timing; cost control</span></td></tr>
+        <tr><td><span class="lang-ja">運営者の経験不足</span><span class="lang-en">Operator inexperience</span></td><td><span class="lang-ja">肥育専業から開始；非常勤獣医；KPI追跡</span><span class="lang-en">Start grower-finisher; part-time vet; KPI tracking</span></td></tr>
+      </tbody>
+    </table>
+    <div class="gold">
+      <span class="lang-ja"><strong>🆕 保険の確認：</strong>フィリピンには政府系の農業保険公社 <strong>PCIC（Philippine Crop Insurance Corporation）</strong>に家畜保険が存在する。ASFによる全損時の唯一のセーフティネットになり得る。第1トランチ前に、PCIC養豚保険の加入可否・保険料・補償範囲を必ず確認すること。</span>
+      <span class="lang-en"><strong>🆕 Insurance check:</strong> The Philippines has government-backed livestock insurance via <strong>PCIC (Philippine Crop Insurance Corporation)</strong>. It can be the only safety net for an ASF total loss. Before Tranche 1, confirm PCIC swine insurance eligibility, premium, and coverage.</span>
+    </div>
+  </div>
+
+  <!-- XI/XII. Permits & Management -->
+  <div class="card">
+    <h3><span class="num">XI</span><span class="lang-ja">許認可・管理・KPI</span><span class="lang-en">Permits, Management & KPIs</span></h3>
+    <p class="lang-ja">オーナー/マネージャーが運営・財務・マーケティングを統括；農場作業員が給餌・清掃・バイオセキュリティを担当；非常勤獣医が健康・ワクチンを担当。<strong>月次で追跡：</strong>FCR、死亡率%、1日平均増体、出荷までの日数、生体1kgあたりコスト。</p>
+    <p class="lang-en">Owner/manager oversees operations, finance, and marketing; farm worker(s) handle feeding, cleaning, biosecurity; part-time veterinarian for health and vaccination. <strong>Track monthly:</strong> FCR, mortality %, average daily gain, days-to-market, cost per kg liveweight.</p>
+  </div>
+
+  <!-- XIII. Funding & Governance -->
+  <div class="card" style="border:2px solid var(--gold)">
+    <h3 style="border-bottom-color:var(--gold-soft)"><span class="num" style="background:var(--gold)">XIII</span><span class="lang-ja">資金調達・ガバナンス（投資家保護）</span><span class="lang-en">Funding & Governance (Investor Protection)</span></h3>
+    <div class="gold">
+      <span class="lang-ja"><strong>資金は一括ではなく、マイルストーン達成ごとにトランチ（分割）で実行される。</strong>これは投資家と運営者の双方を保護し、プロジェクトを監査可能に保つ。</span>
+      <span class="lang-en"><strong>Funds are released in tranches against milestones — not as a single lump sum.</strong> This protects both investor and operator and keeps the project auditable.</span>
+    </div>
+    <table>
+      <thead><tr><th><span class="lang-ja">トランチ</span><span class="lang-en">Tranche</span></th><th class="r"><span class="lang-ja">金額</span><span class="lang-en">Amount</span></th><th><span class="lang-ja">実行条件</span><span class="lang-en">Released when</span></th></tr></thead>
+      <tbody>
+        <tr><td><span class="lang-ja">1 — 建設＆バイオセキュリティ</span><span class="lang-en">1 — Build & biosecurity</span></td><td class="r">₱770,000</td><td><span class="lang-ja">契約締結時；土地確保</span><span class="lang-en">On signed agreement; land secured</span></td></tr>
+        <tr><td><span class="lang-ja">2 — 仕入＆初回飼料</span><span class="lang-en">2 — Stock & first feed</span></td><td class="r">₱500,000</td><td><span class="lang-ja">豚舎＋境界の完成を写真で確認</span><span class="lang-en">Pens + perimeter verified (photos)</span></td></tr>
+        <tr><td><span class="lang-ja">3 — 運営＆バッファ</span><span class="lang-en">3 — Operations & buffer</span></td><td class="r">₱730,000</td><td><span class="lang-ja">初バッチが約30日健康；報告稼働中</span><span class="lang-en">First batch healthy ~30 days; reporting active</span></td></tr>
+      </tbody>
+    </table>
+    <p class="lang-ja"><strong>第1トランチ前に必要な許認可：</strong></p>
+    <ul class="lang-ja">
+      <li>☐ DTI事業名登録</li>
+      <li>☐ バランガイ証明＆市長/事業許可</li>
+      <li>☐ 州獣医局登録＆動物衛生コンプライアンス</li>
+      <li>☐ 環境/衛生クリアランス＆糞尿管理コンプライアンス（ASFゾーニング）</li>
+    </ul>
+    <ul class="lang-en">
+      <li>☐ DTI business name registration</li>
+      <li>☐ Barangay clearance & Mayor's / business permit</li>
+      <li>☐ Provincial Veterinary Office registration & animal health compliance</li>
+      <li>☐ Environmental / sanitation clearance & manure-management (ASF zoning)</li>
+    </ul>
+    <p class="lang-ja" style="margin-top:10px"><strong>出資条件：</strong></p>
+    <ul class="lang-ja">
+      <li><strong>専用のプロジェクト銀行口座</strong>。個人資金との混合は禁止</li>
+      <li>毎月、投資家に<strong>月次報告（下記テンプレート）</strong>を提出 ― 財務・頭数・死亡率・銀行残高・写真</li>
+      <li>第1トランチ前に、<strong>利益配分・所有比率・撤退条件</strong>を書面で合意</li>
+    </ul>
+    <ul class="lang-en">
+      <li>Dedicated project bank account; no commingling with personal funds</li>
+      <li>Monthly report (template below) to the investor — financials, headcount, mortality, bank balance, photos</li>
+      <li>Profit split, ownership %, and exit terms agreed in writing before Tranche 1</li>
+    </ul>
+
+    <div class="gold" style="margin-top:8px">
+      <span class="lang-ja"><strong>🆕 なぜこの厳格な統治構造なのか：</strong>「資金を一括で渡したが、その後の報告も成果も来ない」という失敗は実在する。トランチ実行・専用口座・月次写真報告は、運営者を縛るためではなく<strong>双方の信頼を仕組みで担保し、資金が計画どおり物（豚舎・豚・飼料）に変わっていることを可視化する</strong>ためのもの。誠実な運営者にとってはむしろ追加出資を引き出しやすくする装置になる。</span>
+      <span class="lang-en"><strong>🆕 Why this strict governance:</strong> "Money handed over in one lump, then no reports and no results" is a real failure mode. Tranches, a dedicated account, and monthly photo reports are not about restraining the operator — they <strong>guarantee mutual trust by design and make visible that funds are turning into real assets</strong> (pens, pigs, feed). For an honest operator, this actually makes follow-on funding easier to secure.</span>
+    </div>
+  </div>
+
+  <!-- XIV(a). NEW: Profit Split & Ownership -->
+  <div class="card" style="border:2px dashed var(--gold)">
+    <h3><span class="num" style="background:var(--gold)">🆕</span><span class="lang-ja">利益配分・所有比率・撤退条件（記入欄）</span><span class="lang-en">Profit Split, Ownership & Exit Terms (to fill in)</span></h3>
+    <p class="lang-ja" style="color:var(--muted);font-size:14px">投資家が最初に確認する条項。第1トランチ前に書面で合意すること。下記は記入用の枠組み。</p>
+    <p class="lang-en" style="color:var(--muted);font-size:14px">The terms an investor checks first. Agree in writing before Tranche 1. Framework below to be filled in.</p>
+    <table>
+      <tbody>
+        <tr><td><span class="lang-ja">所有比率（投資家 : 運営者）</span><span class="lang-en">Ownership (investor : operator)</span></td><td>______ % : ______ %</td></tr>
+        <tr><td><span class="lang-ja">利益配分比率</span><span class="lang-en">Profit split</span></td><td>______ % : ______ %</td></tr>
+        <tr><td><span class="lang-ja">配当の頻度・タイミング</span><span class="lang-en">Distribution frequency</span></td><td><span class="lang-ja">☐ サイクル毎 ☐ 四半期 ☐ 年次</span><span class="lang-en">☐ per cycle ☐ quarterly ☐ annually</span></td></tr>
+        <tr><td><span class="lang-ja">再投資ルール（利益のうち再投資する割合）</span><span class="lang-en">Reinvestment rule</span></td><td>______ %</td></tr>
+        <tr><td><span class="lang-ja">運営者の報酬（配分とは別の固定給の有無）</span><span class="lang-en">Operator salary (if separate)</span></td><td>₱______ / <span class="lang-ja">月</span><span class="lang-en">mo</span></td></tr>
+        <tr><td><span class="lang-ja">投資家の買増し/持分譲渡の権利</span><span class="lang-en">Buy-in / transfer rights</span></td><td>__________</td></tr>
+      </tbody>
+    </table>
+
+    <p class="lang-ja" style="margin-top:14px;color:var(--accent)"><strong>⚠ 撤退・損切り条項（Kill-switch）</strong></p>
+    <p class="lang-en" style="margin-top:14px;color:var(--accent)"><strong>⚠ Exit / Kill-switch clause</strong></p>
+    <ul class="lang-ja">
+      <li><strong>全損トリガー：</strong>ASF等で群の死亡率が<strong>______%</strong>を超えた場合、新規仕入を停止し、残資金は専用口座に凍結。追加出資の前に投資家・運営者で再協議</li>
+      <li><strong>清算条件：</strong>2サイクル連続で赤字、または現金残高が運転資金バッファを下回った場合、事業を一時停止し残資産・残資金を所有比率に応じて精算</li>
+      <li><strong>残資金返還：</strong>未実行トランチは投資家に返還（運営者の責めによらない中断時）</li>
+      <li><strong>紛争解決：</strong>準拠法・管轄、調停の方法を明記</li>
+    </ul>
+    <ul class="lang-en">
+      <li><strong>Total-loss trigger:</strong> if herd mortality exceeds <strong>______%</strong> (e.g. ASF), stop new purchases and freeze remaining funds in the project account; re-negotiate before any further funding</li>
+      <li><strong>Wind-down:</strong> two consecutive loss-making cycles, or cash below the working-capital buffer, pauses the business; remaining assets/funds settled per ownership %</li>
+      <li><strong>Return of funds:</strong> un-released tranches return to the investor on a no-fault stoppage</li>
+      <li><strong>Dispute resolution:</strong> state governing law, jurisdiction, and mediation method</li>
+    </ul>
+  </div>
+
+  <!-- XIV. Monthly Report Template -->
+  <div class="card" style="border:2px dashed var(--accent)">
+    <h3><span class="num">📋</span><span class="lang-ja">月次レポートテンプレート</span><span class="lang-en">Monthly Report Template</span></h3>
+    <p class="lang-ja" style="color:var(--muted);font-size:14px">運営者が記入し、<strong>毎月5日までに</strong>投資家へ送付。写真と銀行明細/残高スクショを添付。</p>
+    <p class="lang-en" style="color:var(--muted);font-size:14px">The operator completes and sends this to the investor <strong>by the 5th of each month</strong>. Attach photos and the bank statement / balance screenshot.</p>
+
+    <p style="font-weight:700;margin-top:10px"><span class="lang-ja">A. ヘッダー</span><span class="lang-en">A. Header</span></p>
+    <table><tbody>
+      <tr><td><span class="lang-ja">報告月</span><span class="lang-en">Reporting month</span></td><td>______</td><td><span class="lang-ja">サイクル/バッチ番号</span><span class="lang-en">Cycle/batch #</span></td><td>______</td></tr>
+      <tr><td><span class="lang-ja">作成者</span><span class="lang-en">Prepared by</span></td><td>______</td><td><span class="lang-ja">提出日</span><span class="lang-en">Date submitted</span></td><td>______</td></tr>
+    </tbody></table>
+
+    <p style="font-weight:700;margin-top:10px"><span class="lang-ja">B. 頭数移動</span><span class="lang-en">B. Herd movement</span></p>
+    <table>
+      <thead><tr>
+        <th><span class="lang-ja">期首</span><span class="lang-en">Open</span></th><th><span class="lang-ja">購入</span><span class="lang-en">Bought</span></th><th><span class="lang-ja">出生</span><span class="lang-en">Born</span></th>
+        <th><span class="lang-ja">死亡</span><span class="lang-en">Died</span></th><th><span class="lang-ja">死亡率%</span><span class="lang-en">Mort.%</span></th><th><span class="lang-ja">販売</span><span class="lang-en">Sold</span></th><th><span class="lang-ja">期末</span><span class="lang-en">Close</span></th>
+      </tr></thead>
+      <tbody><tr><td>__</td><td>__</td><td>__</td><td>__</td><td>__</td><td>__</td><td>__</td></tr></tbody>
+    </table>
+
+    <p style="font-weight:700;margin-top:10px"><span class="lang-ja">C. 成長＆飼料</span><span class="lang-en">C. Growth & feed</span></p>
+    <table>
+      <thead><tr>
+        <th><span class="lang-ja">平均体重kg</span><span class="lang-en">Avg wt kg</span></th><th><span class="lang-ja">1日増体</span><span class="lang-en">ADG</span></th><th><span class="lang-ja">飼料使用(袋/kg)</span><span class="lang-en">Feed used</span></th><th><span class="lang-ja">飼料費₱</span><span class="lang-en">Feed ₱</span></th><th>FCR</th>
+      </tr></thead>
+      <tbody><tr><td>__</td><td>__</td><td>__</td><td>__</td><td>__</td></tr></tbody>
+    </table>
+
+    <p style="font-weight:700;margin-top:10px"><span class="lang-ja">D. 健康＆バイオセキュリティ</span><span class="lang-en">D. Health & biosecurity</span></p>
+    <table><tbody>
+      <tr><td><span class="lang-ja">実施ワクチン</span><span class="lang-en">Vaccinations</span></td><td>__________</td></tr>
+      <tr><td><span class="lang-ja">疾病/治療</span><span class="lang-en">Illness/treatments</span></td><td>__________</td></tr>
+      <tr><td><span class="lang-ja">獣医訪問（日付/所見）</span><span class="lang-en">Vet visit</span></td><td>__________</td></tr>
+      <tr><td><span class="lang-ja">地域のASF状況</span><span class="lang-en">ASF status in area</span></td><td><span class="lang-ja">☐ 清浄 ☐ 近隣で疑い ☐ 近隣で確認</span><span class="lang-en">☐ Clear ☐ Suspected ☐ Confirmed nearby</span></td></tr>
+    </tbody></table>
+
+    <p style="font-weight:700;margin-top:10px"><span class="lang-ja">E. 販売</span><span class="lang-en">E. Sales</span></p>
+    <table>
+      <thead><tr><th><span class="lang-ja">販売頭数</span><span class="lang-en">Pigs sold</span></th><th><span class="lang-ja">総kg</span><span class="lang-en">Total kg</span></th><th>₱/kg</th><th><span class="lang-ja">売上₱</span><span class="lang-en">Revenue ₱</span></th><th><span class="lang-ja">バイヤー</span><span class="lang-en">Buyer(s)</span></th></tr></thead>
+      <tbody><tr><td>__</td><td>__</td><td>__</td><td>__</td><td>__</td></tr></tbody>
+    </table>
+
+    <p style="font-weight:700;margin-top:10px"><span class="lang-ja">F. キャッシュフロー（₱）</span><span class="lang-en">F. Cash flow (₱)</span></p>
+    <table><tbody>
+      <tr><td><span class="lang-ja">期首残高</span><span class="lang-en">Opening balance</span></td><td>______</td><td><span class="lang-ja">飼料</span><span class="lang-en">Feed</span></td><td>______</td></tr>
+      <tr><td><span class="lang-ja">＋収入（販売/出資）</span><span class="lang-en">+ Inflows</span></td><td>______</td><td><span class="lang-ja">獣医/医薬品</span><span class="lang-en">Vet/meds</span></td><td>______</td></tr>
+      <tr><td><span class="lang-ja">−支出（合計）</span><span class="lang-en">− Outflows</span></td><td>______</td><td><span class="lang-ja">人件費</span><span class="lang-en">Labor</span></td><td>______</td></tr>
+      <tr><td><span class="lang-ja">光熱費/その他</span><span class="lang-en">Utilities/other</span></td><td>______</td><td><span class="lang-ja">仕入</span><span class="lang-en">Stock purchase</span></td><td>______</td></tr>
+      <tr class="total"><td><span class="lang-ja">期末銀行残高</span><span class="lang-en">Closing bank balance</span></td><td>______</td><td><span class="lang-ja">銀行明細添付?</span><span class="lang-en">Statement attached?</span></td><td>☐ <span class="lang-ja">はい</span><span class="lang-en">Yes</span></td></tr>
+    </tbody></table>
+
+    <p style="font-weight:700;margin-top:10px"><span class="lang-ja">G. 課題・リスク・来月の計画</span><span class="lang-en">G. Issues, risks & next month</span></p>
+    <table><tbody>
+      <tr><td><span class="lang-ja">今月の問題</span><span class="lang-en">Problems this month</span></td><td>__________</td></tr>
+      <tr><td><span class="lang-ja">来月の計画</span><span class="lang-en">Plan for next month</span></td><td>__________</td></tr>
+      <tr><td><span class="lang-ja">資金請求（あれば）＋理由</span><span class="lang-en">Fund request + reason</span></td><td>__________</td></tr>
+      <tr><td><span class="lang-ja">添付写真</span><span class="lang-en">Photos attached</span></td><td><span class="lang-ja">☐豚舎 ☐豚 ☐飼料在庫 ☐銀行残高</span><span class="lang-en">☐Pens ☐Pigs ☐Feed ☐Bank balance</span></td></tr>
+    </tbody></table>
+  </div>
+
+  <footer>
+    <span class="lang-ja">Kawai's Piggery 改訂版事業計画書 · 投資家レビュー用 · 2026-06-16<br>数値は計画上の見積り。確約前に必ず現地価格を確認のこと。</span>
+    <span class="lang-en">Kawai's Piggery — Revised Business Proposal · Prepared for investor review · 2026-06-16<br>Figures are planning estimates; verify local prices before commitment.</span>
+  </footer>
+
+</div>
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-en', lang==='en');
+  document.getElementById('btn-ja').classList.toggle('active', lang==='ja');
+  document.getElementById('btn-en').classList.toggle('active', lang==='en');
+}
+</script>
+</body>
+</html>
