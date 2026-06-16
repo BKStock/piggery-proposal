@@ -6,64 +6,61 @@
 <title>養豚事業計画書へのアドバイス / Advice on Your Piggery Proposal / Payo sa Iyong Panukala</title>
 <style>
   :root{
-    --bg:#eef2f6; --card:#ffffff; --ink:#0f172a; --body:#334155; --muted:#64748b;
-    --line:#e2e8f0; --accent:#dc2626; --accent-soft:#fef2f2;
-    --teal:#0d9488; --teal-d:#0f766e; --teal-soft:#f0fdfa;
-    --gold:#b45309; --gold-soft:#fffbeb; --green:#16a34a; --green-soft:#f0fdf4;
-    --shadow:0 1px 3px rgba(15,23,42,.08),0 8px 24px rgba(15,23,42,.06);
+    --bg:#f5f7fa; --card:#ffffff; --ink:#1e293b; --body:#3f4b5e; --muted:#6b7688;
+    --line:#e8edf3; --accent:#0ea5e9; --accent-soft:#f0f9ff;
+    --teal:#14b8a6; --teal-d:#0d9488; --teal-soft:#f0fdfa;
+    --gold:#d97706; --gold-soft:#fffbeb; --green:#22c55e; --green-soft:#f0fdf4;
+    --pink:#ec4899; --pink-soft:#fdf2f8;
+    --shadow:0 1px 3px rgba(15,23,42,.06),0 10px 30px rgba(15,23,42,.05);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;scroll-padding-top:80px}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP","Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--body);line-height:1.8;font-size:16px;padding:0 0 60px;-webkit-font-smoothing:antialiased}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP","Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--body);line-height:1.85;font-size:16px;padding:0 0 60px;-webkit-font-smoothing:antialiased}
   .wrap{max-width:860px;margin:0 auto;padding:0 16px}
-  .langbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,.04)}
+  .langbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,.03)}
   .langbar .inner{max-width:860px;margin:0 auto;padding:0 16px;display:flex;gap:8px;justify-content:center}
-  .langbar button{flex:1;max-width:170px;padding:11px 12px;border:2px solid transparent;border-radius:11px;font-size:15px;font-weight:700;cursor:pointer;transition:all .18s;background:#f1f5f9;color:var(--muted)}
+  .langbar button{flex:1;max-width:170px;padding:11px 12px;border:2px solid transparent;border-radius:11px;font-size:15px;font-weight:700;cursor:pointer;transition:all .18s;background:#eef2f7;color:var(--muted)}
   .langbar button:hover{background:#e2e8f0}
-  .langbar button.active{background:var(--ink);color:#fff}
+  .langbar button.active{background:var(--teal-d);color:#fff}
 
-  header.hero{background:linear-gradient(135deg,#0d9488 0%,#0f766e 55%,#115e59 100%);color:#fff;border-radius:24px;padding:40px 36px;margin-bottom:22px;box-shadow:var(--shadow);position:relative;overflow:hidden}
-  header.hero::after{content:"📋";position:absolute;right:-6px;bottom:-20px;font-size:140px;opacity:.10;transform:rotate(-8deg)}
-  header.hero .badge{display:inline-block;background:var(--gold);color:#fff;font-size:12px;font-weight:800;padding:6px 14px;border-radius:7px;margin-bottom:16px;letter-spacing:.6px}
-  header.hero h1{font-size:27px;font-weight:800;margin-bottom:10px;line-height:1.4;position:relative}
-  header.hero p{font-size:15px;opacity:.95;position:relative;margin:0}
+  header.hero{background:linear-gradient(135deg,#2dd4bf 0%,#14b8a6 50%,#0d9488 100%);color:#fff;border-radius:24px;padding:42px 36px;margin-bottom:22px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  header.hero::after{content:"🐷";position:absolute;right:-4px;bottom:-18px;font-size:130px;opacity:.13;transform:rotate(-8deg)}
+  header.hero .badge{display:inline-block;background:rgba(255,255,255,.22);color:#fff;font-size:12px;font-weight:800;padding:6px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:.4px}
+  header.hero h1{font-size:26px;font-weight:800;margin-bottom:10px;line-height:1.45;position:relative}
+  header.hero p{font-size:15px;opacity:.96;position:relative;margin:0}
 
-  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 32px;margin-bottom:18px;box-shadow:var(--shadow)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px 32px;margin-bottom:18px;box-shadow:var(--shadow)}
   .card h3{font-size:20px;font-weight:800;margin-bottom:16px;color:var(--ink);padding-bottom:12px;border-bottom:2px solid var(--teal-soft);display:flex;align-items:center;gap:12px}
   .card h3 .ic{font-size:24px;flex-shrink:0}
   .card p{margin-bottom:14px;color:var(--body)}
   .card ul{list-style:none;margin:10px 0}
   .card li{padding:8px 0 8px 30px;position:relative;color:var(--body)}
-  .card li::before{content:"→";position:absolute;left:6px;color:var(--teal);font-weight:800}
-  .card.good li::before{content:"✓";color:var(--green)}
-  .card.fix li::before{content:"✎";color:var(--gold)}
+  .card li::before{content:"🌱";position:absolute;left:2px;font-size:14px}
+  .card.good li::before{content:"✨"}
+  .card.fix li::before{content:"💡"}
 
-  .lead{font-size:17px;color:var(--ink);font-weight:500;background:var(--teal-soft);border-left:4px solid var(--teal);padding:16px 20px;border-radius:0 10px 10px 0;margin-bottom:16px}
+  .lead{font-size:17px;color:var(--ink);font-weight:500;background:var(--teal-soft);border-left:4px solid var(--teal);padding:18px 22px;border-radius:0 12px 12px 0;margin-bottom:16px}
 
-  .issue{border-radius:14px;padding:20px 24px;margin:16px 0;border:1px solid}
-  .issue.red{background:var(--accent-soft);border-color:#fecaca}
-  .issue.gold{background:var(--gold-soft);border-color:#fde68a}
-  .issue .tag{display:inline-block;font-size:12px;font-weight:800;padding:4px 12px;border-radius:20px;margin-bottom:8px;letter-spacing:.4px}
-  .issue.red .tag{background:var(--accent);color:#fff}
-  .issue.gold .tag{background:var(--gold);color:#fff}
-  .issue h4{font-size:17px;color:var(--ink);margin-bottom:6px}
-  .issue .why{font-size:14.5px;color:var(--muted);font-style:italic;margin:8px 0}
-  .issue .do{background:#fff;border-radius:10px;padding:12px 16px;margin-top:10px;border-left:3px solid var(--teal)}
-  .issue .do b{color:var(--teal-d)}
+  .issue{border-radius:16px;padding:22px 24px;margin:16px 0;border:1px solid}
+  .issue.soft{background:var(--accent-soft);border-color:#bae6fd}
+  .issue .tag{display:inline-block;font-size:12px;font-weight:800;padding:5px 14px;border-radius:20px;margin-bottom:10px;letter-spacing:.3px;background:var(--accent);color:#fff}
+  .issue h4{font-size:17px;color:var(--ink);margin-bottom:8px;font-weight:700}
+  .issue .why{font-size:14.5px;color:var(--muted);margin:10px 0;background:#fff;border-radius:10px;padding:10px 14px}
+  .issue .do{background:var(--green-soft);border-radius:10px;padding:13px 16px;margin-top:10px;border-left:3px solid var(--green)}
+  .issue .do b{color:#15803d}
 
-  .numbox{display:flex;gap:14px;align-items:flex-start;margin:14px 0;background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .numbox{display:flex;gap:14px;align-items:flex-start;margin:14px 0;background:#f8fafc;border:1px solid var(--line);border-radius:14px;padding:16px 18px}
   .numbox .n{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px}
-  .numbox .t{flex:1}
-  .numbox .t b{color:var(--ink)}
+  .numbox .t{flex:1}.numbox .t b{color:var(--ink)}
 
   table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
   th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
   th{background:var(--teal-soft);font-weight:800;color:var(--teal-d)}
   td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
-  tr.good td{color:var(--green)}tr.bad td{color:var(--accent)}
+  tr.good td{color:#15803d}
 
-  .sign{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px 32px;margin-bottom:18px;box-shadow:var(--shadow);text-align:center}
-  .sign p{color:var(--body)}.sign .from{font-weight:800;color:var(--ink);font-size:18px;margin-top:10px}
+  .sign{background:linear-gradient(135deg,var(--pink-soft),var(--teal-soft));border:1px solid var(--line);border-radius:20px;padding:30px 32px;margin-bottom:18px;box-shadow:var(--shadow);text-align:center}
+  .sign p{color:var(--body)}.sign .from{font-weight:800;color:var(--ink);font-size:18px;margin-top:12px}
 
   .lang-en,.lang-tl{display:none}
   body.show-en .lang-ja,body.show-tl .lang-ja{display:none}
@@ -74,7 +71,7 @@
   body.show-en span.lang-en{display:inline}body.show-tl span.lang-tl{display:inline}
 
   footer{text-align:center;color:var(--muted);font-size:13px;padding:30px 16px 8px;line-height:1.7}
-  @media(max-width:600px){body{font-size:15px}header.hero{padding:30px 22px}header.hero h1{font-size:21px}.card{padding:22px 20px}.langbar button{font-size:13px;padding:10px 8px}table{font-size:13px}th,td{padding:9px 10px}}
+  @media(max-width:600px){body{font-size:15px}header.hero{padding:30px 22px}header.hero h1{font-size:20px}.card{padding:22px 20px}.langbar button{font-size:13px;padding:10px 8px}table{font-size:13px}th,td{padding:9px 10px}}
   @media print{.langbar{display:none}body{background:#fff}.card,.sign{box-shadow:none;break-inside:avoid}}
 </style>
 </head>
@@ -89,159 +86,159 @@
 <div class="wrap">
 
   <header class="hero">
-    <span class="badge"><span class="lang-ja">作成者へのアドバイス</span><span class="lang-en">ADVICE TO THE AUTHOR</span><span class="lang-tl">PAYO SA MAY-AKDA</span></span>
-    <h1><span class="lang-ja">あなたの養豚事業計画書へのアドバイス</span><span class="lang-en">Advice on Your Piggery Business Proposal</span><span class="lang-tl">Payo sa Iyong Panukala sa Piggery</span></h1>
-    <p><span class="lang-ja">Kawai's Piggery 計画書を、投資家に通る形にするための率直なフィードバック</span><span class="lang-en">Honest feedback to make your Kawai's Piggery plan investor-ready</span><span class="lang-tl">Tapat na feedback upang maging handa-sa-investor ang iyong plano</span></p>
+    <span class="badge"><span class="lang-ja">あなたへのメッセージ 💌</span><span class="lang-en">A NOTE FOR YOU 💌</span><span class="lang-tl">PARA SA IYO 💌</span></span>
+    <h1><span class="lang-ja">あなたの養豚事業計画書を読みました 🐷</span><span class="lang-en">I Read Your Piggery Business Proposal 🐷</span><span class="lang-tl">Nabasa Ko ang Iyong Panukala sa Piggery 🐷</span></h1>
+    <p><span class="lang-ja">もっと素敵な計画書にするための、やさしいアドバイスです</span><span class="lang-en">Some gentle advice to make your plan even better</span><span class="lang-tl">Ilang banayad na payo upang maging mas maganda pa ang iyong plano</span></p>
   </header>
 
   <!-- Intro -->
   <div class="card">
-    <p class="lead"><span class="lang-ja">まず最初に：あなたの計画書は「悪い」ものではありません。事業の骨格はしっかりしていて、養豚という選択も堅実です。ただ、このまま投資家に出すと <strong>3つの点で必ず突っ込まれて、信用を失います</strong>。それを防ぐためのアドバイスです。厳しく聞こえる部分もありますが、すべて「あなたが資金を得るため」です。</span><span class="lang-en">First: your proposal is NOT bad. The skeleton is solid and choosing piggery is sound. But as it stands, an investor will <strong>challenge you on three points and you will lose credibility</strong>. This advice exists to prevent that. Some of it sounds harsh — but all of it is to help you get funded.</span><span class="lang-tl">Una sa lahat: HINDI masama ang iyong panukala. Matatag ang balangkas at tamang pagpili ang piggery. Ngunit sa kasalukuyang anyo nito, <strong>tutuligsain ka ng investor sa tatlong punto at mawawalan ka ng kredibilidad</strong>. Layunin ng payong ito na maiwasan iyon. May ilang bahagi na mukhang mahigpit — ngunit lahat ito ay para matulungan kang makakuha ng pondo.</span></p>
+    <p class="lead"><span class="lang-ja">まず伝えたいのは、<strong>あなたの計画書はとても良いスタートだということ</strong>です 😊 事業の土台はしっかりしていて、養豚を選んだのも賢い判断です。これから紹介するのは「ダメ出し」ではなく、<strong>あなたが投資家から信頼を得て、安心して事業を始められるように</strong>という気持ちで書いた、3つのちょっとしたコツです。一緒に、もう一段すてきな計画書にしていきましょう。</span><span class="lang-en">The first thing I want to say is that <strong>your proposal is a really good start</strong> 😊 The foundation is solid and choosing piggery was a smart decision. What follows isn't criticism — it's three little tips, written with the wish that <strong>you'll earn investors' trust and start your business with peace of mind</strong>. Let's make this plan even nicer, together.</span><span class="lang-tl">Ang una kong nais sabihin ay <strong>magandang simula ang iyong panukala</strong> 😊 Matatag ang pundasyon at matalinong desisyon ang pagpili ng piggery. Ang mga susunod ay hindi pamumuna — tatlong maliliit na tip ito, isinulat nang may hangaring <strong>makamit mo ang tiwala ng investor at masimulan ang negosyo nang may kapanatagan</strong>. Gawin nating mas maganda pa ang planong ito, nang magkasama.</span></p>
   </div>
 
   <!-- What you did well -->
   <div class="card good">
-    <h3><span class="ic">👍</span><span class="lang-ja">よくできている点（ここは変えないで）</span><span class="lang-en">What You Did Well (don't change these)</span><span class="lang-tl">Magaling Mong Nagawa (huwag baguhin)</span></h3>
+    <h3><span class="ic">🌟</span><span class="lang-ja">とても良いところ（このまま大切に）</span><span class="lang-en">What's Already Great (please keep these)</span><span class="lang-tl">Ang Magaganda Na (panatilihin ito)</span></h3>
     <ul class="lang-ja">
-      <li>養豚を選んだこと自体が正解。豚肉はフィリピンの主食タンパク源で、需要が構造的に安定している</li>
-      <li>40〜60頭という中規模スタートは賢い。小さすぎず、大きすぎず、リスクを抑えて学べる規模</li>
-      <li>繁殖と肥育の両方を視野に入れている点。将来的に子豚コストを自前化できる発想は正しい</li>
-      <li>市場・競合・施設・廃棄物まで章立てして書けている。構成力はある</li>
+      <li>養豚を選んだのは素晴らしい判断です。豚肉はフィリピンの食卓に欠かせないので、需要がずっと安定しています</li>
+      <li>40〜60頭という規模も、ちょうど良いです。無理なく学びながら始められる、賢いサイズ感です</li>
+      <li>繁殖と肥育の両方を考えているのも◎。将来、子豚を自分で育てればコストを下げられます</li>
+      <li>市場・競合・施設・廃棄物まで、きちんと章立てして書けています。計画をまとめる力がありますね</li>
     </ul>
     <ul class="lang-en">
-      <li>Choosing piggery is correct. Pork is a staple protein in the Philippines with structurally stable demand</li>
-      <li>A 40–60 head mid-scale start is smart — not too small, not too big; you can learn while limiting risk</li>
-      <li>Considering both breeding and fattening is right — eventually producing your own weaners cuts cost</li>
-      <li>You structured the document well: market, competition, facilities, waste. You can organize a plan</li>
+      <li>Choosing piggery was a wonderful decision. Pork is essential on Filipino tables, so demand stays stable</li>
+      <li>A 40–60 head size is just right — a smart scale where you can learn comfortably as you start</li>
+      <li>Considering both breeding and fattening is great too — raising your own piglets later lowers cost</li>
+      <li>You wrote clear chapters covering market, competition, facilities, and waste. You have a real talent for organizing a plan</li>
     </ul>
     <ul class="lang-tl">
-      <li>Tama ang pagpili ng piggery. Ang baboy ay pangunahing protina sa Pilipinas na may matatag na demand</li>
-      <li>Matalino ang 40–60 ulo na panimula — hindi masyadong maliit, hindi masyadong malaki; matututo ka habang kontrolado ang panganib</li>
-      <li>Tama na isinaalang-alang mo ang breeding at fattening — sa kalaunan, magkakaroon ka ng sariling weaner at mababawasan ang gastos</li>
-      <li>Maganda ang pagkakaayos ng dokumento: merkado, kompetisyon, pasilidad, basura. Marunong kang mag-organisa ng plano</li>
+      <li>Magandang desisyon ang pagpili ng piggery. Mahalaga ang baboy sa hapag ng Pilipino, kaya matatag ang demand</li>
+      <li>Tamang-tama ang 40–60 ulo — matalinong sukat kung saan makakapag-aral ka nang kumportable habang nagsisimula</li>
+      <li>Mabuti rin na isinaalang-alang mo ang breeding at fattening — kapag inalagaan mo ang sariling biik, bababa ang gastos</li>
+      <li>Malinaw mong naisulat ang mga kabanata tungkol sa merkado, kompetisyon, pasilidad, at basura. May talento kang mag-organisa ng plano</li>
     </ul>
   </div>
 
-  <!-- Issue 1 -->
+  <!-- Tip 1 -->
   <div class="card">
-    <h3><span class="ic">🩹</span><span class="lang-ja">直すべき点 ①：収益が「うますぎる話」になっている</span><span class="lang-en">Fix #1: Your Revenue Is a "Too-Good" Story</span><span class="lang-tl">Ayusin #1: Sobrang Ganda ng Iyong Kita</span></h3>
-    <div class="issue red">
-      <span class="tag"><span class="lang-ja">最重要</span><span class="lang-en">CRITICAL</span><span class="lang-tl">KRITIKAL</span></span>
-      <h4><span class="lang-ja">「40頭×100kg×₱180＝₱720,000」と書きましたね。これが危険です。</span><span class="lang-en">You wrote "40 × 100kg × ₱180 = ₱720,000." This is dangerous.</span><span class="lang-tl">Isinulat mo ang "40 × 100kg × ₱180 = ₱720,000." Mapanganib ito.</span></h4>
-      <p class="why"><span class="lang-ja">なぜ？ この計算は「豚が1頭も死なず、全頭が満額で売れる」という、現実には起きない理想を前提にしています。投資家は養豚の現実を知っています。離乳前に10〜15%は死ぬ、と。</span><span class="lang-en">Why? It assumes zero pigs die and all sell at full price — which never happens. Investors know piggery reality: 10–15% die before weaning.</span><span class="lang-tl">Bakit? Ipinapalagay nito na walang baboy na mamamatay at lahat ay mabebenta sa buong presyo — na hindi nangyayari. Alam ng investor ang katotohanan: 10–15% ang namamatay bago mag-wean.</span></p>
-      <div class="do"><b><span class="lang-ja">こうしてください：</span><span class="lang-en">Do this:</span><span class="lang-tl">Gawin ito:</span></b>
-        <span class="lang-ja"> 死亡率5%を前提に「38頭販売」で計算し直す。総収入₱684,000、コスト₱560,000を引いて<strong>純利益は1サイクル約₱124,000</strong>。この「正直な数字」を書けば、投資家は逆にあなたを信用します。</span>
-        <span class="lang-en"> Recalculate with 5% mortality → "38 sold." Gross ₱684,000 minus ₱560,000 cost = <strong>net ≈ ₱124,000 per cycle</strong>. Writing this "honest number" actually makes investors trust you.</span>
-        <span class="lang-tl"> Muling kalkulahin gamit ang 5% patay → "38 nabenta." Gross ₱684,000 bawas ₱560,000 gastos = <strong>net ≈ ₱124,000 kada cycle</strong>. Ang pagsulat ng "tapat na numerong" ito ay nagpapatiwala sa investor sa iyo.</span>
+    <h3><span class="ic">💧</span><span class="lang-ja">コツ ①：収益をもう少し「現実的」にすると、もっと安心されます</span><span class="lang-en">Tip #1: Making Revenue a Bit More Realistic Brings More Reassurance</span><span class="lang-tl">Tip #1: Ang Mas Makatotohanang Kita ay Nagbibigay ng Mas Maraming Katiyakan</span></h3>
+    <div class="issue soft">
+      <span class="tag"><span class="lang-ja">だいじなポイント</span><span class="lang-en">IMPORTANT</span><span class="lang-tl">MAHALAGA</span></span>
+      <h4><span class="lang-ja">計画書に「40頭×100kg×₱180＝₱720,000」と書いてありますね。</span><span class="lang-en">Your plan says "40 × 100kg × ₱180 = ₱720,000."</span><span class="lang-tl">Sinasabi ng plano mong "40 × 100kg × ₱180 = ₱720,000."</span></h4>
+      <p class="why"><span class="lang-ja">💭 この計算は「豚が1頭も死なず、全部が満額で売れる」という、とても順調な場合の数字です。実際には、子豚のうち10〜15%は育つ前に亡くなってしまうことがあります。投資家さんはそれを知っているので、少し心配になってしまうかもしれません。</span><span class="lang-en">💭 This assumes no pigs die and everything sells at full price — a very smooth case. In reality, 10–15% of piglets can pass away before growing up. Investors know this, so they might feel a little worried.</span><span class="lang-tl">💭 Ipinapalagay nito na walang baboy na mamamatay at lahat ay mabebenta sa buong presyo — napakaganda nitong kaso. Sa totoo, 10–15% ng biik ay maaaring mamatay bago lumaki. Alam ito ng investor, kaya maaaring medyo mag-alala sila.</span></p>
+      <div class="do"><b><span class="lang-ja">こうしてみましょう 🙂</span><span class="lang-en">Let's try this 🙂</span><span class="lang-tl">Subukan natin ito 🙂</span></b>
+        <span class="lang-ja"> 死亡率を5%と見て「38頭が売れる」として計算し直してみてください。総収入₱684,000からコスト₱560,000を引くと、<strong>1サイクルの純利益は約₱124,000</strong>。この正直な数字を書くと、投資家さんはかえって「この人は現実をわかっている」と安心して、信頼してくれます ✨</span>
+        <span class="lang-en"> Try recalculating with 5% mortality → "38 sold." Gross ₱684,000 minus ₱560,000 cost = <strong>net ≈ ₱124,000 per cycle</strong>. Writing this honest number actually reassures investors — "this person understands reality" — and earns their trust ✨</span>
+        <span class="lang-tl"> Subukang muling kalkulahin gamit ang 5% patay → "38 nabenta." Gross ₱684,000 bawas ₱560,000 gastos = <strong>net ≈ ₱124,000 kada cycle</strong>. Ang pagsulat ng tapat na numerong ito ay nagbibigay-katiyakan sa investor — "naiintindihan ng taong ito ang katotohanan" — at nagkakamit ng tiwala nila ✨</span>
       </div>
     </div>
   </div>
 
-  <!-- Issue 2 -->
+  <!-- Tip 2 -->
   <div class="card">
-    <h3><span class="ic">🩹</span><span class="lang-ja">直すべき点 ②：最初の半年を生き延びるお金がない</span><span class="lang-en">Fix #2: No Money to Survive the First 6 Months</span><span class="lang-tl">Ayusin #2: Walang Pera Para Mabuhay ang Unang 6 na Buwan</span></h3>
-    <div class="issue red">
-      <span class="tag"><span class="lang-ja">最重要</span><span class="lang-en">CRITICAL</span><span class="lang-tl">KRITIKAL</span></span>
-      <h4><span class="lang-ja">子豚を買ってから売れるまで4〜5ヶ月。その間、収入はゼロです。</span><span class="lang-en">It takes 4–5 months from buying weaners to selling. During that time, income is zero.</span><span class="lang-tl">4–5 buwan mula pagbili ng weaner hanggang mabenta. Sa panahong iyon, zero ang kita.</span></h4>
-      <p class="why"><span class="lang-ja">なぜ？ でも飼料代も人件費も毎月出ていきます。あなたの予算₱2,000,000には「最初の収入が入るまでの繋ぎ資金（運転資金）」の項目がありません。これだと初年度に必ず資金ショートします。これは養豚で一番多い失敗パターンです。</span><span class="lang-en">Why? But feed and labor go out every month. Your ₱2M budget has no line for "bridge money until first income" (working capital). You WILL run out of cash in year one. This is the #1 failure mode in piggery.</span><span class="lang-tl">Bakit? Ngunit lumalabas ang feed at sahod kada buwan. Ang iyong ₱2M na badyet ay walang linya para sa "pam-tawid na pera hanggang unang kita" (working capital). Tiyak na mauubusan ka ng pera sa unang taon. Ito ang #1 na sanhi ng pagkabigo sa piggery.</span></p>
-      <div class="do"><b><span class="lang-ja">こうしてください：</span><span class="lang-en">Do this:</span><span class="lang-tl">Gawin ito:</span></b>
-        <span class="lang-ja"> 予算の中に <strong>運転資金₱230,000 ＋ 予備費₱100,000 = 計₱330,000</strong> を必ず確保してください。建物や設備を少し小さくしてでも、この現金クッションを優先する。1回の悪いサイクルで事業が死ぬのを防ぎます。</span>
-        <span class="lang-en"> Reserve <strong>₱230,000 working capital + ₱100,000 contingency = ₱330,000</strong> in your budget. Even if you build slightly smaller, prioritize this cash cushion. It stops one bad cycle from killing the business.</span>
-        <span class="lang-tl"> Maglaan ng <strong>₱230,000 working capital + ₱100,000 contingency = ₱330,000</strong> sa iyong badyet. Kahit bahagyang liitan ang gusali, unahin ang cash cushion na ito. Pinipigilan nito na patayin ng isang masamang cycle ang negosyo.</span>
+    <h3><span class="ic">💧</span><span class="lang-ja">コツ ②：最初の数ヶ月を安心して過ごすための「お守り資金」</span><span class="lang-en">Tip #2: A "Safety Fund" to Get Through the First Few Months Calmly</span><span class="lang-tl">Tip #2: Isang "Pang-Emergency na Pondo" Para Makaraos nang Mahinahon ang Unang Buwan</span></h3>
+    <div class="issue soft">
+      <span class="tag"><span class="lang-ja">だいじなポイント</span><span class="lang-en">IMPORTANT</span><span class="lang-tl">MAHALAGA</span></span>
+      <h4><span class="lang-ja">子豚を買ってから売れるまで、4〜5ヶ月かかりますよね。</span><span class="lang-en">It takes 4–5 months from buying weaners to selling them.</span><span class="lang-tl">4–5 buwan mula pagbili ng weaner hanggang mabenta.</span></h4>
+      <p class="why"><span class="lang-ja">💭 その間、収入はまだ入ってきません。でも、飼料代や人件費は毎月かかります。今の予算には「最初の収入が入るまでの生活費（運転資金）」が入っていないので、途中でお金が足りなくなってしまうことがあります。これは多くの養豚場が経験する、よくあるつまずきです。だからこそ、先に備えておけば安心です。</span><span class="lang-en">💭 During that time, no income comes in yet — but feed and labor cost money every month. Your current budget doesn't include "living costs until the first income" (working capital), so you might run short partway through. Many piggeries experience this common stumble. That's exactly why preparing in advance brings peace of mind.</span><span class="lang-tl">💭 Sa panahong iyon, wala pang kita — ngunit may gastos sa feed at sahod kada buwan. Ang kasalukuyang badyet mo ay walang "panggastos hanggang unang kita" (working capital), kaya maaaring kapusin ka sa kalagitnaan. Maraming piggery ang nakakaranas nito. Kaya nga ang paghahanda nang maaga ay nagbibigay ng kapanatagan.</span></p>
+      <div class="do"><b><span class="lang-ja">こうしてみましょう 🙂</span><span class="lang-en">Let's try this 🙂</span><span class="lang-tl">Subukan natin ito 🙂</span></b>
+        <span class="lang-ja"> 予算の中に <strong>運転資金₱230,000 ＋ 予備費₱100,000＝計₱330,000</strong> を取っておきましょう。建物や設備を少しコンパクトにしてでも、この「お守りのお金」を残すほうが、ずっと安心して経営できます。もし1回うまくいかないサイクルがあっても、これがあれば事業を続けられます 💪</span>
+        <span class="lang-en"> Set aside <strong>₱230,000 working capital + ₱100,000 contingency = ₱330,000</strong> in your budget. Even if you make buildings or equipment a bit more compact, keeping this "safety money" lets you run things with much more peace of mind. If one cycle doesn't go well, this keeps your business alive 💪</span>
+        <span class="lang-tl"> Maglaan ng <strong>₱230,000 working capital + ₱100,000 contingency = ₱330,000</strong> sa badyet. Kahit gawing mas compact ang gusali o kagamitan, ang pagtatabi ng "pang-emergency na perang" ito ay nagbibigay sa iyo ng mas maraming kapanatagan. Kung may isang cycle na hindi maganda, mananatiling buhay ang negosyo mo dahil dito 💪</span>
       </div>
     </div>
   </div>
 
-  <!-- Issue 3 -->
+  <!-- Tip 3 -->
   <div class="card">
-    <h3><span class="ic">🩹</span><span class="lang-ja">直すべき点 ③：ASF（アフリカ豚熱）対策がほぼ書かれていない</span><span class="lang-en">Fix #3: Almost No ASF (African Swine Fever) Plan</span><span class="lang-tl">Ayusin #3: Halos Walang Plano Laban sa ASF</span></h3>
-    <div class="issue red">
-      <span class="tag"><span class="lang-ja">最重要</span><span class="lang-en">CRITICAL</span><span class="lang-tl">KRITIKAL</span></span>
-      <h4><span class="lang-ja">ASFをリスク欄に1行書いただけ。これは一番怖い見落としです。</span><span class="lang-en">You mentioned ASF in just one line. This is the scariest oversight.</span><span class="lang-tl">Binanggit mo ang ASF sa isang linya lang. Ito ang pinakanakakatakot na napalampas.</span></h4>
-      <p class="why"><span class="lang-ja">なぜ？ ASFは2019年以降、フィリピンの小規模養豚場を何度も全滅させてきました。40〜60頭規模なら、一度の感染で群も投資も全損。治療法はありません。予防だけが命綱です。「厳格なバイオセキュリティ」という抽象的な言葉では投資家は納得しません。</span><span class="lang-en">Why? ASF has repeatedly wiped out small Philippine piggeries since 2019. At 40–60 heads, one outbreak = total loss of herd and investment. There is no cure — only prevention. The vague phrase "strict biosecurity" will not satisfy an investor.</span><span class="lang-tl">Bakit? Paulit-ulit nang nawasak ng ASF ang maliliit na piggery sa Pilipinas mula 2019. Sa 40–60 ulo, isang outbreak = kabuuang pagkawala. Walang lunas — pag-iwas lamang. Hindi sapat sa investor ang malabong "strict biosecurity."</span></p>
-      <div class="do"><b><span class="lang-ja">こうしてください：</span><span class="lang-en">Do this:</span><span class="lang-tl">Gawin ito:</span></b>
-        <span class="lang-ja"> ASFを独立した1つの章にして、<strong>具体的な手順</strong>を書く：①周囲フェンス＋単一入口 ②ゲートでの足消毒・車両消毒 ③外部の豚肉持ち込み禁止（残飯給餌禁止）④子豚はASF清浄・認証農場からのみ・健康証明書を要求 ⑤新規導入豚は14日間隔離 ⑥バッチ間の完全清掃消毒 ⑦専用の長靴・衣類。さらに「発生時の初動」（隔離→州獣医/BAIに連絡→出入り全停止→記録）も書いておく。</span>
-        <span class="lang-en"> Make ASF its own chapter with <strong>concrete steps</strong>: ①perimeter fence + single gate ②foot & vehicle disinfection ③no outside pork (no swill feeding) ④source weaners only from ASF-free certified farms with health certificates ⑤14-day quarantine for new pigs ⑥full clean-disinfect between batches ⑦dedicated boots/clothing. Also write an "outbreak response" (isolate → call Provincial Vet/BAI → stop all movement → document).</span>
-        <span class="lang-tl"> Gawing sariling kabanata ang ASF na may <strong>konkretong hakbang</strong>: ①bakod + isang gate ②disinfection ng paa at sasakyan ③bawal ang baboy mula labas (bawal swill) ④weaner mula lang sa ASF-free certified farm na may health certificate ⑤14-araw na quarantine sa bagong baboy ⑥linis-disimpekta sa pagitan ng batch ⑦nakalaang bota/damit. Magsulat din ng "tugon sa outbreak" (ihiwalay → tawagan ang Provincial Vet/BAI → itigil ang galaw → idokumento).</span>
+    <h3><span class="ic">💧</span><span class="lang-ja">コツ ③：ASF（豚の病気）への備えを、もう少し詳しく</span><span class="lang-en">Tip #3: A Bit More Detail on Protecting Against ASF (the pig disease)</span><span class="lang-tl">Tip #3: Kaunti Pang Detalye sa Pag-iwas sa ASF (sakit ng baboy)</span></h3>
+    <div class="issue soft">
+      <span class="tag"><span class="lang-ja">だいじなポイント</span><span class="lang-en">IMPORTANT</span><span class="lang-tl">MAHALAGA</span></span>
+      <h4><span class="lang-ja">ASFについては、リスク欄に1行だけ書いてありますね。ここをもう少し手厚くすると、ぐっと良くなります。</span><span class="lang-en">ASF is mentioned in just one line in the risk section. Strengthening this part will make a big difference.</span><span class="lang-tl">Isang linya lang ang ASF sa bahagi ng panganib. Ang pagpapalakas dito ay malaki ang ipagkakaiba.</span></h4>
+      <p class="why"><span class="lang-ja">💭 ASF（アフリカ豚熱）は、2019年以降フィリピンの小さな養豚場を何度も苦しめてきた病気です。残念ながら治療法がなく、防ぐことが一番大切なんです。だからこそ「しっかり防疫します」という一言よりも、具体的にどう守るかを書くと、投資家さんはとても安心します。あなたが豚を大切に守ろうとしている気持ちが伝わります。</span><span class="lang-en">💭 ASF (African Swine Fever) has troubled small Philippine piggeries many times since 2019. Sadly there's no cure, so prevention matters most. That's why, rather than just "we'll do strict biosecurity," writing concretely how you'll protect them reassures investors greatly — it shows your care for keeping the pigs safe.</span><span class="lang-tl">💭 Ang ASF (African Swine Fever) ay maraming beses nang nagpahirap sa maliliit na piggery sa Pilipinas mula 2019. Sa kasamaang palad, walang lunas, kaya pinakamahalaga ang pag-iwas. Kaya't sa halip na "magsasagawa kami ng biosecurity," ang konkretong pagsulat kung paano mo sila poprotektahan ay labis na nagbibigay-katiyakan sa investor — ipinapakita nito ang iyong malasakit.</span></p>
+      <div class="do"><b><span class="lang-ja">こうしてみましょう 🙂</span><span class="lang-en">Let's try this 🙂</span><span class="lang-tl">Subukan natin ito 🙂</span></b>
+        <span class="lang-ja"> ASFを独立した1つの章にして、守り方を具体的に書いてみてください：①周りに柵を作り、入口は1つだけにする ②門で足や車を消毒する ③外から豚肉を持ち込まない（残飯を与えない）④子豚はASFのない認証農場から、健康証明書つきで買う ⑤新しい豚は14日間、別の場所で様子を見る ⑥次のグループを入れる前に、しっかり掃除・消毒する ⑦農場専用の長靴と服を使う。さらに「もし発生したら」（すぐ隔離→州の獣医さん・BAIに連絡→人や豚の出入りを止める→記録する）も書いておくと完璧です 🌸</span>
+        <span class="lang-en"> Make ASF its own chapter and write concretely how to protect them: ①build a fence with just one entrance ②disinfect feet and vehicles at the gate ③no outside pork (no swill feeding) ④buy weaners from ASF-free certified farms with health certificates ⑤keep new pigs separate for 14 days to observe ⑥clean and disinfect thoroughly before the next group ⑦use farm-only boots and clothes. Adding "if an outbreak happens" (isolate right away → call the Provincial Vet/BAI → stop pig and people movement → keep records) makes it perfect 🌸</span>
+        <span class="lang-tl"> Gawing sariling kabanata ang ASF at isulat nang konkreto kung paano sila poprotektahan: ①gumawa ng bakod na may isang pasukan lamang ②i-disinfect ang paa at sasakyan sa gate ③walang baboy mula labas (walang swill) ④bumili ng weaner mula sa ASF-free certified farm na may health certificate ⑤ihiwalay ang bagong baboy ng 14 araw para mabantayan ⑥linisin at i-disinfect nang mabuti bago ang susunod na grupo ⑦gumamit ng bota at damit na pang-farm lamang. Ang pagdagdag ng "kung may outbreak" (ihiwalay agad → tawagan ang Provincial Vet/BAI → itigil ang galaw → magtala) ay ginagawa itong perpekto 🌸</span>
       </div>
     </div>
   </div>
 
-  <!-- Honest payback -->
+  <!-- Payback -->
   <div class="card fix">
-    <h3><span class="ic">⏱️</span><span class="lang-ja">投資回収について：「1〜2年」は書き直してください</span><span class="lang-en">On Payback: Rewrite the "1–2 Years"</span><span class="lang-tl">Tungkol sa Pagbawi: Baguhin ang "1–2 Taon"</span></h3>
-    <p><span class="lang-ja">計画書には「1〜2年で投資回収」と書いてありますが、あなた自身の数字と矛盾します。1サイクル純益₱124,000、年2サイクルなら年₱250,000。₱2,000,000を割ると<strong>回収は約8年</strong>です。2年で回収するには年₱1,000,000の純益が必要で、これは今の規模では物理的に不可能です。</span><span class="lang-en">Your plan says "payback in 1–2 years," but this contradicts your own numbers. Net ₱124,000/cycle × 2 cycles = ₱250,000/year. Divided into ₱2,000,000 = <strong>about 8 years</strong>. Two-year payback needs ₱1,000,000/year net — physically impossible at this scale.</span><span class="lang-tl">Sinasabi ng plano mong "pagbawi sa 1–2 taon," ngunit sumasalungat ito sa sarili mong numero. Net ₱124,000/cycle × 2 = ₱250,000/taon. Hatiin sa ₱2,000,000 = <strong>humigit-kumulang 8 taon</strong>. Ang 2-taong pagbawi ay nangangailangan ng ₱1,000,000/taon — imposible sa laki na ito.</span></p>
+    <h3><span class="ic">⏱️</span><span class="lang-ja">投資回収の年数について、ひとつだけ</span><span class="lang-en">Just One Thing About the Payback Period</span><span class="lang-tl">Isang Bagay Lang Tungkol sa Panahon ng Pagbawi</span></h3>
+    <p><span class="lang-ja">計画書には「1〜2年で回収」と書いてありますが、実はあなた自身の計算と少しズレてしまっています。1サイクルの純利益が₱124,000で、年に2サイクルなら年₱250,000。₱2,000,000を回収するには<strong>だいたい8年</strong>かかる計算になります。投資家さんが計算すると気づいてしまうので、ここは正直な数字にしておくほうが安心です 😊</span><span class="lang-en">Your plan says "payback in 1–2 years," but this is actually a little off from your own math. With net ₱124,000 per cycle and 2 cycles a year, that's ₱250,000/year. Recovering ₱2,000,000 takes <strong>about 8 years</strong>. An investor will notice when they do the math, so being honest here brings more reassurance 😊</span><span class="lang-tl">Sinasabi ng plano mong "pagbawi sa 1–2 taon," ngunit medyo magkaiba ito sa sarili mong kalkulasyon. Sa net na ₱124,000 kada cycle at 2 cycle bawat taon, iyon ay ₱250,000/taon. Ang pagbawi ng ₱2,000,000 ay tumatagal ng <strong>humigit-kumulang 8 taon</strong>. Mapapansin ito ng investor, kaya ang pagiging tapat dito ay nagbibigay ng mas maraming katiyakan 😊</span></p>
     <table>
-      <thead><tr><th><span class="lang-ja">シナリオ</span><span class="lang-en">Scenario</span><span class="lang-tl">Senaryo</span></th><th class="r"><span class="lang-ja">年間純益</span><span class="lang-en">Annual net</span><span class="lang-tl">Net/taon</span></th><th class="r"><span class="lang-ja">回収年数</span><span class="lang-en">Payback</span><span class="lang-tl">Pagbawi</span></th></tr></thead>
+      <thead><tr><th><span class="lang-ja">場合</span><span class="lang-en">Scenario</span><span class="lang-tl">Senaryo</span></th><th class="r"><span class="lang-ja">年間の利益</span><span class="lang-en">Annual net</span><span class="lang-tl">Net/taon</span></th><th class="r"><span class="lang-ja">回収まで</span><span class="lang-en">Payback</span><span class="lang-tl">Pagbawi</span></th></tr></thead>
       <tbody>
-        <tr class="bad"><td><span class="lang-ja">悲観（低価格）</span><span class="lang-en">Pessimistic</span><span class="lang-tl">Pesimistiko</span></td><td class="r">~₱150,000</td><td class="r">~13 <span class="lang-ja">年</span><span class="lang-en">yrs</span><span class="lang-tl">taon</span></td></tr>
+        <tr><td><span class="lang-ja">控えめな場合</span><span class="lang-en">Modest</span><span class="lang-tl">Katamtaman</span></td><td class="r">~₱150,000</td><td class="r">~13 <span class="lang-ja">年</span><span class="lang-en">yrs</span><span class="lang-tl">taon</span></td></tr>
         <tr><td><span class="lang-ja">標準（₱180・年2回）</span><span class="lang-en">Standard</span><span class="lang-tl">Standard</span></td><td class="r">~₱250,000</td><td class="r">~5–8 <span class="lang-ja">年</span><span class="lang-en">yrs</span><span class="lang-tl">taon</span></td></tr>
-        <tr class="good"><td><span class="lang-ja">楽観（₱190・繁殖込み）</span><span class="lang-en">Optimistic (w/ breeding)</span><span class="lang-tl">Optimistiko</span></td><td class="r">~₱450,000+</td><td class="r">~3–4 <span class="lang-ja">年</span><span class="lang-en">yrs</span><span class="lang-tl">taon</span></td></tr>
+        <tr class="good"><td><span class="lang-ja">好調（₱190・繁殖込み）</span><span class="lang-en">Strong (with breeding)</span><span class="lang-tl">Malakas</span></td><td class="r">~₱450,000+</td><td class="r">~3–4 <span class="lang-ja">年</span><span class="lang-en">yrs</span><span class="lang-tl">taon</span></td></tr>
       </tbody>
     </table>
-    <div class="issue gold">
-      <div class="do"><b><span class="lang-ja">こうしてください：</span><span class="lang-en">Do this:</span><span class="lang-tl">Gawin ito:</span></b>
-        <span class="lang-ja"> 正直に「<strong>定常状態で3〜4年</strong>」と書く。そして「第2フェーズで自家繁殖を始め、子豚購入コストが消えれば回収が早まる」と添える。これなら数字と矛盾せず、かつ将来の伸びしろも見せられます。<strong>嘘の2年より、説明できる4年のほうが投資家には響きます。</strong></span>
-        <span class="lang-en"> Honestly state "<strong>3–4 years at steady state</strong>," and add "payback accelerates in Phase 2 when home-bred weaners remove the purchase cost." This matches your numbers AND shows upside. <strong>An explainable 4 years beats a fake 2 years to an investor.</strong></span>
-        <span class="lang-tl"> Tapat na isulat ang "<strong>3–4 taon sa steady state</strong>," at idagdag "bumibilis ang pagbawi sa Phase 2 kapag inalis ng sariling weaner ang gastos sa pagbili." Tumutugma ito sa numero AT nagpapakita ng pag-asenso. <strong>Mas mabuti sa investor ang maipaliwanag na 4 taon kaysa pekeng 2 taon.</strong></span>
+    <div class="issue soft">
+      <div class="do"><b><span class="lang-ja">こうしてみましょう 🙂</span><span class="lang-en">Let's try this 🙂</span><span class="lang-tl">Subukan natin ito 🙂</span></b>
+        <span class="lang-ja"> 「<strong>うまく軌道に乗れば3〜4年</strong>」と書いて、「第2フェーズで子豚を自分で育てられるようになれば、もっと早く回収できます」と添えてみてください。これなら数字とも合っていて、将来の伸びしろも見せられます。正直な数字のほうが、かえって投資家さんに信頼されますよ 🌷</span>
+        <span class="lang-en"> Try writing "<strong>3–4 years once it's running well</strong>," and add "payback gets faster in Phase 2 when you raise your own piglets." This matches your numbers and shows future growth. Honest numbers actually earn more trust from investors 🌷</span>
+        <span class="lang-tl"> Subukang isulat ang "<strong>3–4 taon kapag maayos nang tumatakbo</strong>," at idagdag "bumibilis ang pagbawi sa Phase 2 kapag inalagaan mo na ang sariling biik." Tumutugma ito sa numero at nagpapakita ng pag-asenso. Ang tapat na numero ay mas nagkakamit ng tiwala mula sa investor 🌷</span>
       </div>
     </div>
   </div>
 
-  <!-- Smaller suggestions -->
+  <!-- Extra -->
   <div class="card fix">
-    <h3><span class="ic">💡</span><span class="lang-ja">さらに加えると強くなる点</span><span class="lang-en">Extra Touches That Strengthen It</span><span class="lang-tl">Karagdagang Bagay na Magpapalakas</span></h3>
-    <div class="numbox"><div class="n">1</div><div class="t"><b><span class="lang-ja">段階方式（フェーズ分け）にする</span><span class="lang-en">Go phased</span><span class="lang-tl">Gawing hakbang-hakbang</span></b><br><span class="lang-ja">最初から繁殖まで全部やると初収入が9〜11ヶ月後になります。まず「肥育専業（子豚を買って育てて売る）」から始め、4〜5ヶ月で現金を回す。慣れてから繁殖を足す。</span><span class="lang-en">Doing everything from day one delays income to 9–11 months. Start grower-finisher (buy, raise, sell) for cash in 4–5 months, then add breeding once experienced.</span><span class="lang-tl">Ang paggawa ng lahat agad ay nag-aantala ng kita sa 9–11 buwan. Magsimula sa grower-finisher para sa pera sa 4–5 buwan, pagkatapos ay magdagdag ng breeding kapag may karanasan na.</span></div></div>
-    <div class="numbox"><div class="n">2</div><div class="t"><b><span class="lang-ja">飼料費を「変動費」として扱う</span><span class="lang-en">Treat feed as variable cost</span><span class="lang-tl">Ituring ang feed bilang variable cost</span></b><br><span class="lang-ja">飼料は原価の60〜70%を占める最大コストで、輸入相場と為替で動きます。「固定₱400,000」でなく、価格が±20%動いたらどうなるか（感度分析）を見せる。損益分岐は約₱147/kg、飼料が20%上がると₱164/kgに上がります。</span><span class="lang-en">Feed is 60–70% of cost — the biggest one — and swings with import prices and FX. Instead of "fixed ₱400,000," show what happens at ±20% (sensitivity). Break-even is ~₱147/kg, rising to ₱164/kg if feed rises 20%.</span><span class="lang-tl">Ang feed ay 60–70% ng gastos — ang pinakamalaki — at nagbabago ayon sa import at FX. Sa halip na "fixed ₱400,000," ipakita kung ano ang mangyayari sa ±20% (sensitivity). Break-even ~₱147/kg, aakyat sa ₱164/kg kung tataas ng 20% ang feed.</span></div></div>
-    <div class="numbox"><div class="n">3</div><div class="t"><b><span class="lang-ja">PCIC（政府の家畜保険）を確認する</span><span class="lang-en">Check PCIC (govt livestock insurance)</span><span class="lang-tl">Tingnan ang PCIC</span></b><br><span class="lang-ja">フィリピンには政府系のPCIC（農業保険公社）に家畜保険があります。ASFで全滅した時の唯一のセーフティネットになり得ます。加入可否・保険料・補償範囲を必ず確認し、計画書に「確認済み」と書く。</span><span class="lang-en">The Philippines has PCIC government livestock insurance — possibly your only safety net for an ASF total loss. Confirm eligibility, premium, and coverage, and note "confirmed" in your plan.</span><span class="lang-tl">May PCIC na livestock insurance ang gobyerno — maaaring ito lang ang safety net mo sa ASF total loss. Kumpirmahin ang eligibility, premium, at saklaw, at isulat "kumpirmado" sa plano.</span></div></div>
-    <div class="numbox"><div class="n">4</div><div class="t"><b><span class="lang-ja">毎月の記録表をつける</span><span class="lang-en">Keep a monthly record sheet</span><span class="lang-tl">Magtago ng buwanang record</span></b><br><span class="lang-ja">頭数・死亡率・飼料費・売上・現金残高を毎月記録する。これは投資家への報告にも、自分の経営判断にも効きます。死亡率5%超・飼料費が売上の70%超・現金が月支出1ヶ月分割れ、の3つは危険信号として監視する。</span><span class="lang-en">Record heads, mortality, feed cost, revenue, and cash balance monthly — useful for investor reports and your own decisions. Watch 3 danger signals: mortality &gt;5%, feed &gt;70% of revenue, cash below one month of expenses.</span><span class="lang-tl">Itala buwanan ang ulo, patay, gastos sa feed, kita, at cash balance — kapaki-pakinabang sa ulat at sa sarili mong desisyon. Bantayan ang 3 senyales: patay &gt;5%, feed &gt;70% ng kita, cash mas mababa sa isang buwang gastos.</span></div></div>
+    <h3><span class="ic">💡</span><span class="lang-ja">あるともっと素敵になる工夫</span><span class="lang-en">Extra Touches That Make It Even Nicer</span><span class="lang-tl">Karagdagang Bagay na Magpapaganda Pa</span></h3>
+    <div class="numbox"><div class="n">1</div><div class="t"><b><span class="lang-ja">段階を分けて進める</span><span class="lang-en">Go step by step</span><span class="lang-tl">Hakbang-hakbang</span></b><br><span class="lang-ja">最初から繁殖まで全部やると、収入が入るのが9〜11ヶ月後になってしまいます。まずは「子豚を買って育てて売る」ところから始めて、4〜5ヶ月で現金を回し、慣れてきたら繁殖を足す。これが無理のない進め方です。</span><span class="lang-en">Doing everything including breeding from the start pushes income out to 9–11 months. Start with "buy, raise, sell," get cash in 4–5 months, then add breeding once you're comfortable. A gentle pace.</span><span class="lang-tl">Ang paggawa ng lahat mula simula ay nag-aantala ng kita sa 9–11 buwan. Magsimula sa "bili, alaga, benta," kumita sa 4–5 buwan, pagkatapos magdagdag ng breeding kapag sanay na. Banayad na hakbang.</span></div></div>
+    <div class="numbox"><div class="n">2</div><div class="t"><b><span class="lang-ja">飼料のお金は「変わるもの」として書く</span><span class="lang-en">Treat feed cost as something that changes</span><span class="lang-tl">Ituring na nagbabago ang gastos sa feed</span></b><br><span class="lang-ja">飼料は一番大きな出費（原価の6〜7割）で、輸入や為替で値段が動きます。「固定でいくら」ではなく、もし2割上がったらどうなるかも書いておくと安心です。損益分岐は約₱147/kg、飼料が2割上がると₱164/kgになります。</span><span class="lang-en">Feed is the biggest expense (60–70% of cost) and its price moves with imports and FX. Rather than "fixed amount," noting what happens if it rises 20% is reassuring. Break-even is ~₱147/kg, rising to ₱164/kg if feed goes up 20%.</span><span class="lang-tl">Ang feed ang pinakamalaking gastos (60–70%) at nagbabago ang presyo ayon sa import at FX. Sa halip na "fixed," makakatulong na isulat kung ano ang mangyayari kung tataas ng 20%. Break-even ~₱147/kg, aakyat sa ₱164/kg kung tataas ng 20% ang feed.</span></div></div>
+    <div class="numbox"><div class="n">3</div><div class="t"><b><span class="lang-ja">PCIC（政府の家畜保険）を調べてみる</span><span class="lang-en">Look into PCIC (govt livestock insurance)</span><span class="lang-tl">Alamin ang PCIC</span></b><br><span class="lang-ja">フィリピンには政府のPCIC（農業保険公社）に家畜の保険があります。もしASFで大きな被害が出たときの、心強い備えになります。入れるか・保険料・補償内容を一度確認してみてください。</span><span class="lang-en">The Philippines has PCIC government livestock insurance. It can be a reassuring safeguard if ASF causes big losses. Try checking eligibility, premium, and coverage once.</span><span class="lang-tl">May PCIC na livestock insurance ang gobyerno ng Pilipinas. Magandang proteksyon ito kung magdulot ng malaking pinsala ang ASF. Subukang tingnan ang eligibility, premium, at saklaw.</span></div></div>
+    <div class="numbox"><div class="n">4</div><div class="t"><b><span class="lang-ja">毎月、かんたんな記録をつける</span><span class="lang-en">Keep a simple monthly record</span><span class="lang-tl">Magtago ng simpleng buwanang record</span></b><br><span class="lang-ja">頭数・死亡数・飼料費・売上・お金の残高を毎月メモしておくと、投資家さんへの報告にも、自分の判断にも役立ちます。「死亡が月5%超」「飼料費が売上の7割超」「残高が1ヶ月の支出を下回る」の3つは、気をつけるサインとして覚えておくと安心です。</span><span class="lang-en">Noting heads, deaths, feed cost, revenue, and cash balance each month helps both your investor reports and your own decisions. Remember three signals to watch: deaths over 5%/month, feed over 70% of revenue, cash below one month of expenses.</span><span class="lang-tl">Ang pagtatala ng ulo, patay, gastos sa feed, kita, at cash balance kada buwan ay nakakatulong sa ulat at sa sarili mong desisyon. Tandaan ang tatlong senyales: patay higit 5%/buwan, feed higit 70% ng kita, cash mas mababa sa isang buwang gastos.</span></div></div>
   </div>
 
   <!-- If raising money -->
   <div class="card fix">
-    <h3><span class="ic">🤝</span><span class="lang-ja">もし他人からお金を集めるなら</span><span class="lang-en">If You Are Raising Money From Someone</span><span class="lang-tl">Kung Manghihingi Ka ng Pera</span></h3>
-    <p><span class="lang-ja">投資家やパートナーから資金を入れてもらう場合、彼らが一番気にするのは「自分のお金がちゃんと豚と豚舎に変わるか」です。次の3つを計画書に入れると、信頼が一気に上がります。</span><span class="lang-en">If an investor or partner funds you, their #1 worry is "will my money actually turn into pigs and pens?" Adding these three things will sharply increase their trust.</span><span class="lang-tl">Kung may investor o partner na magpopondo, ang #1 alalahanin nila ay "magiging tunay bang baboy at kulungan ang pera ko?" Ang pagdaragdag ng tatlong ito ay magpapataas ng tiwala nila.</span></p>
+    <h3><span class="ic">🤝</span><span class="lang-ja">もし誰かに出資してもらうなら</span><span class="lang-en">If Someone Will Be Funding You</span><span class="lang-tl">Kung May Magpopondo sa Iyo</span></h3>
+    <p><span class="lang-ja">投資家さんやパートナーからお金を出してもらう場合、その人が一番気にするのは「自分のお金が、ちゃんと豚や豚舎になるのかな」という点です。次の4つを計画に入れておくと、相手はとても安心して、信頼してくれます。</span><span class="lang-en">If an investor or partner funds you, their biggest concern is "will my money really turn into pigs and pens?" Including these four things will make them feel very reassured and trusting.</span><span class="lang-tl">Kung may investor o partner na magpopondo, ang pinakamalaki nilang alalahanin ay "magiging tunay nga bang baboy at kulungan ang pera ko?" Ang pagsama ng apat na ito ay magpaparamdam sa kanila ng katiyakan at tiwala.</span></p>
     <ul class="lang-ja">
-      <li><strong>分割（トランチ）出資：</strong>一括でなく「建設完了→写真確認→次の資金」と段階で渡す形にする</li>
-      <li><strong>専用の事業口座：</strong>個人のお金と混ぜない。事業の出入りが透明になる</li>
-      <li><strong>月次報告：</strong>毎月、財務・頭数・死亡率・銀行残高・写真を投資家に送る</li>
-      <li><strong>利益配分・撤退条件を先に書面化：</strong>所有比率、利益の分け方、そして「死亡率○%超やASF全滅時にどうするか（追加出資か清算か、残資金の扱い）」を最初に決めておく</li>
+      <li><strong>分けて渡してもらう：</strong>一度に全額ではなく「建物ができた→写真で確認→次のお金」と段階で受け取る形にする</li>
+      <li><strong>事業専用の口座を作る：</strong>個人のお金と混ぜないことで、お金の流れがきれいに見えます</li>
+      <li><strong>毎月の報告：</strong>財務・頭数・死亡数・銀行残高・写真を、毎月送ってあげる</li>
+      <li><strong>利益の分け方と「もしも」のルールを先に決める：</strong>所有の割合、利益をどう分けるか、そして「もし病気で大きな被害が出たらどうするか（追加でお金を入れるのか、一度たたむのか、残ったお金はどうするか）」を、最初に書面で決めておくと安心です</li>
     </ul>
     <ul class="lang-en">
-      <li><strong>Tranche funding:</strong> release in stages — "build done → photos verified → next funds" — not one lump sum</li>
-      <li><strong>Dedicated business account:</strong> never mix with personal money; keeps cash flow transparent</li>
-      <li><strong>Monthly reports:</strong> send financials, headcount, mortality, bank balance, and photos every month</li>
-      <li><strong>Profit split & exit terms in writing first:</strong> ownership %, how profit is shared, and "what happens at &gt;X% mortality or ASF total loss" (more funding or wind-down, and how leftover funds are handled)</li>
+      <li><strong>Receive it in parts:</strong> not all at once — "building done → verified by photo → next funds," in stages</li>
+      <li><strong>Make a business-only account:</strong> not mixing with personal money keeps the money flow clean and clear</li>
+      <li><strong>Monthly reports:</strong> send financials, headcount, deaths, bank balance, and photos every month</li>
+      <li><strong>Decide profit sharing and "what if" rules first:</strong> ownership share, how profit is split, and "what to do if disease causes big losses (add more money, pause, or how to handle leftover funds)" — deciding this in writing first brings reassurance</li>
     </ul>
     <ul class="lang-tl">
-      <li><strong>Hatihати na pondo:</strong> ilabas nang paunti-unti — "tapos ang build → na-verify ang litrato → susunod na pondo" — hindi isang buo</li>
-      <li><strong>Nakalaang business account:</strong> huwag haluan ng personal na pera; nananatiling transparent ang cash flow</li>
+      <li><strong>Tanggapin nang hatihati:</strong> hindi lahat nang sabay — "tapos ang gusali → na-verify sa litrato → susunod na pondo," paunti-unti</li>
+      <li><strong>Gumawa ng account para sa negosyo lang:</strong> ang hindi paghahalo sa personal na pera ay nagpapanatiling malinis at malinaw ang daloy ng pera</li>
       <li><strong>Buwanang ulat:</strong> ipadala ang pananalapi, bilang, patay, bank balance, at litrato kada buwan</li>
-      <li><strong>Hati sa kita at exit terms muna sa papel:</strong> % ng pagmamay-ari, paghahati ng kita, at "ano ang mangyayari sa &gt;X% patay o ASF total loss" (dagdag na pondo o wind-down, at paano ang natirang pera)</li>
+      <li><strong>Magpasya muna sa hatian ng kita at "paano kung" na patakaran:</strong> bahagi ng pagmamay-ari, paghahati ng kita, at "ano ang gagawin kung magdulot ng malaking pinsala ang sakit (magdagdag ng pera, ihinto, o paano ang natirang pondo)" — ang pagpapasya nito sa papel muna ay nagbibigay ng katiyakan</li>
     </ul>
   </div>
 
   <!-- Next steps -->
   <div class="card">
-    <h3><span class="ic">✅</span><span class="lang-ja">次にやること（この順番で）</span><span class="lang-en">Your Next Steps (in this order)</span><span class="lang-tl">Susunod Mong Gagawin (sa pagkakasunod)</span></h3>
-    <div class="numbox"><div class="n">1</div><div class="t"><span class="lang-ja">収益表を「死亡率5%・38頭販売・純益₱124,000」に直す（Fix①）</span><span class="lang-en">Fix the revenue table to "5% mortality, 38 sold, net ₱124,000" (Fix #1)</span><span class="lang-tl">Ayusin ang revenue table sa "5% patay, 38 nabenta, net ₱124,000" (Fix #1)</span></div></div>
-    <div class="numbox"><div class="n">2</div><div class="t"><span class="lang-ja">予算に運転資金₱330,000を入れる（Fix②）</span><span class="lang-en">Add ₱330,000 working capital to the budget (Fix #2)</span><span class="lang-tl">Magdagdag ng ₱330,000 working capital sa badyet (Fix #2)</span></div></div>
-    <div class="numbox"><div class="n">3</div><div class="t"><span class="lang-ja">ASF対策を独立した章にして具体化（Fix③）</span><span class="lang-en">Make ASF its own concrete chapter (Fix #3)</span><span class="lang-tl">Gawing konkretong kabanata ang ASF (Fix #3)</span></div></div>
-    <div class="numbox"><div class="n">4</div><div class="t"><span class="lang-ja">回収年数を「3〜4年」に修正</span><span class="lang-en">Correct payback to "3–4 years"</span><span class="lang-tl">Itama ang pagbawi sa "3–4 taon"</span></div></div>
-    <div class="numbox"><div class="n">5</div><div class="t"><span class="lang-ja">地元の実際の価格（子豚・飼料・売値）を確認して数字を差し替える</span><span class="lang-en">Verify real local prices (weaner, feed, sale) and swap in the numbers</span><span class="lang-tl">I-verify ang totoong lokal na presyo (weaner, feed, benta) at palitan ang numero</span></div></div>
-    <div class="numbox"><div class="n">6</div><div class="t"><span class="lang-ja">DTI・バランガイ・州獣医局・環境の許認可を確認・取得する</span><span class="lang-en">Confirm and secure DTI, Barangay, Provincial Vet, and environmental permits</span><span class="lang-tl">Kumpirmahin at kunin ang DTI, Barangay, Provincial Vet, at environmental permit</span></div></div>
+    <h3><span class="ic">📝</span><span class="lang-ja">次にやってみること（この順番で）</span><span class="lang-en">What to Try Next (in this order)</span><span class="lang-tl">Susunod na Subukan (sa pagkakasunod)</span></h3>
+    <div class="numbox"><div class="n">1</div><div class="t"><span class="lang-ja">収益表を「死亡率5%・38頭販売・純益₱124,000」に直してみる</span><span class="lang-en">Update the revenue table to "5% mortality, 38 sold, net ₱124,000"</span><span class="lang-tl">I-update ang revenue table sa "5% patay, 38 nabenta, net ₱124,000"</span></div></div>
+    <div class="numbox"><div class="n">2</div><div class="t"><span class="lang-ja">予算に「お守り資金」₱330,000を入れる</span><span class="lang-en">Add the ₱330,000 "safety fund" to the budget</span><span class="lang-tl">Idagdag ang ₱330,000 na "pang-emergency na pondo" sa badyet</span></div></div>
+    <div class="numbox"><div class="n">3</div><div class="t"><span class="lang-ja">ASFの守り方を、独立した章にして詳しく書く</span><span class="lang-en">Write ASF protection as its own detailed chapter</span><span class="lang-tl">Isulat ang proteksyon sa ASF bilang detalyadong kabanata</span></div></div>
+    <div class="numbox"><div class="n">4</div><div class="t"><span class="lang-ja">回収年数を「3〜4年」にやさしく直す</span><span class="lang-en">Gently correct payback to "3–4 years"</span><span class="lang-tl">Banayad na itama ang pagbawi sa "3–4 taon"</span></div></div>
+    <div class="numbox"><div class="n">5</div><div class="t"><span class="lang-ja">地元の本当の値段（子豚・飼料・売値）を確かめて数字を入れ替える</span><span class="lang-en">Check real local prices (weaner, feed, sale) and swap in the numbers</span><span class="lang-tl">Tingnan ang totoong lokal na presyo at palitan ang numero</span></div></div>
+    <div class="numbox"><div class="n">6</div><div class="t"><span class="lang-ja">DTI・バランガイ・州獣医局・環境の許可を確認・取得する</span><span class="lang-en">Confirm and get the DTI, Barangay, Provincial Vet, and environmental permits</span><span class="lang-tl">Kumpirmahin at kunin ang DTI, Barangay, Provincial Vet, at environmental permit</span></div></div>
   </div>
 
   <!-- Closing -->
   <div class="sign">
-    <p><span class="lang-ja">最後に：あなたの計画は「直せば通る」レベルにあります。上の3つの致命的な穴さえ埋めれば、堂々と投資家に出せます。数字を正直にすることは、弱さではなく<strong>強さ</strong>です。応援しています。</span><span class="lang-en">Finally: your plan is at the "fixable and fundable" level. Close the three critical gaps above and you can present it to investors with confidence. Being honest with numbers is not weakness — it is <strong>strength</strong>. Rooting for you.</span><span class="lang-tl">Sa huli: ang plano mo ay nasa antas na "naaayos at mapopondohan." Punan ang tatlong kritikal na puwang sa itaas at maipakikita mo ito sa investor nang may tiwala. Ang pagiging tapat sa numero ay hindi kahinaan — ito ay <strong>lakas</strong>. Kakampi mo kami.</span></p>
+    <p><span class="lang-ja">最後に、もう一度伝えたいです。<strong>あなたの計画は、ほんの少し手を加えるだけで、きっと投資家に通るものになります。</strong> 数字を正直にすることは、決して弱さではありません。むしろ、相手を大切にする<strong>誠実さ</strong>であり、いちばんの強みです。あなたの挑戦を、心から応援しています 🐷🌟</span><span class="lang-en">Finally, I want to say it once more. <strong>With just a little adjustment, your plan will surely become one that wins investors over.</strong> Being honest with numbers is never weakness — it's <strong>sincerity</strong> that respects others, and your greatest strength. I'm truly cheering for your venture 🐷🌟</span><span class="lang-tl">Sa huli, nais kong sabihin muli. <strong>Sa kaunting pagsasaayos lamang, tiyak na magiging panukala ito na makakakuha ng investor.</strong> Ang pagiging tapat sa numero ay hindi kahinaan — ito ay <strong>katapatan</strong> na gumagalang sa iba, at ang iyong pinakamalakas na puwersa. Taos-puso kong sinusuportahan ang iyong pakikipagsapalaran 🐷🌟</span></p>
     <p class="from">— &AI Chat</p>
   </div>
 
   <footer>
-    <span class="lang-ja">Kawai's Piggery 計画書への助言 · 作成者向け · 2026-06-16</span>
-    <span class="lang-en">Advice on the Kawai's Piggery Proposal · For the author · 2026-06-16</span>
-    <span class="lang-tl">Payo sa Panukala ng Kawai's Piggery · Para sa may-akda · 2026-06-16</span>
+    <span class="lang-ja">Kawai's Piggery 計画書への、やさしいアドバイス · 2026-06-16</span>
+    <span class="lang-en">Gentle advice on the Kawai's Piggery Proposal · 2026-06-16</span>
+    <span class="lang-tl">Banayad na payo sa Panukala ng Kawai's Piggery · 2026-06-16</span>
   </footer>
 
 </div>
