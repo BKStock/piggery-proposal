@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>事業計画書：養豚プロジェクト / Business Proposal: Piggery Project</title>
+<style>
+  :root{
+    --bg:#f8fafc; --card:#ffffff; --ink:#1e293b; --muted:#64748b;
+    --line:#e2e8f0; --accent:#e11d48; --accent-soft:#fff1f2; --jp:#0f766e; --jp-soft:#f0fdfa;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Segoe UI",Roboto,sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.7;
+    padding:24px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto}
+  header{
+    background:linear-gradient(135deg,#e11d48,#be123c); color:#fff;
+    border-radius:20px; padding:40px 32px; margin-bottom:24px;
+    box-shadow:0 10px 30px rgba(225,29,72,.25);
+  }
+  header .emoji{font-size:48px;display:block;margin-bottom:12px}
+  header h1{font-size:26px;font-weight:800;margin-bottom:6px;line-height:1.4}
+  header h2{font-size:17px;font-weight:500;opacity:.92}
+  header .meta{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px}
+  header .pill{background:rgba(255,255,255,.2);padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;backdrop-filter:blur(4px)}
+  .toggle{
+    display:flex;gap:8px;justify-content:center;margin-bottom:24px;
+    position:sticky;top:12px;z-index:50;
+  }
+  .toggle button{
+    flex:1;max-width:200px;padding:12px 20px;border:none;border-radius:12px;
+    font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+  }
+  .toggle button.active{background:var(--ink);color:#fff;transform:translateY(-1px)}
+  .toggle button:not(.active){background:#fff;color:var(--muted)}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:28px;margin-bottom:18px;box-shadow:0 2px 8px rgba(0,0,0,.04);
+  }
+  .card h3{
+    font-size:19px;font-weight:800;margin-bottom:14px;color:var(--ink);
+    padding-bottom:10px;border-bottom:2px solid var(--accent-soft);
+    display:flex;align-items:center;gap:10px;
+  }
+  .card h3 .num{
+    background:var(--accent);color:#fff;width:30px;height:30px;border-radius:8px;
+    display:inline-flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;
+  }
+  .card p{margin-bottom:12px;color:#334155}
+  .card ul{list-style:none;margin:8px 0}
+  .card li{padding:6px 0 6px 26px;position:relative;color:#334155}
+  .card li::before{content:"▸";position:absolute;left:6px;color:var(--accent);font-weight:700}
+  .kv{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+  .kv .item{background:var(--accent-soft);border-radius:10px;padding:10px 16px;flex:1;min-width:160px}
+  .kv .item .label{font-size:12px;color:var(--muted);font-weight:600;margin-bottom:2px}
+  .kv .item .val{font-size:16px;font-weight:800;color:var(--accent)}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+  th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line)}
+  th{background:var(--accent-soft);font-weight:700;color:var(--accent)}
+  td:last-child,th:last-child{text-align:right;font-variant-numeric:tabular-nums}
+  tr.total td{font-weight:800;color:var(--ink);border-top:2px solid var(--accent);background:#fafafa}
+  .highlight{
+    background:var(--jp-soft);border-left:4px solid var(--jp);border-radius:8px;
+    padding:14px 18px;margin:14px 0;
+  }
+  .highlight .big{font-size:22px;font-weight:800;color:var(--jp)}
+  .lang-en{display:none}
+  body.show-en .lang-ja{display:none}
+  body.show-en .lang-en{display:block}
+  footer{text-align:center;color:var(--muted);font-size:13px;padding:24px 0 8px}
+  @media(max-width:600px){
+    header{padding:28px 22px}header h1{font-size:21px}
+    .card{padding:20px}.toggle button{font-size:13px;padding:10px 12px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Language Toggle -->
+  <div class="toggle">
+    <button id="btn-ja" class="active" onclick="setLang('ja')">🇯🇵 日本語</button>
+    <button id="btn-en" onclick="setLang('en')">🇬🇧 English</button>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <span class="emoji">🐷</span>
+    <div class="lang-ja">
+      <h1>事業計画書：養豚プロジェクト</h1>
+      <h2>Kawai's Piggery — 商業養豚事業</h2>
+    </div>
+    <div class="lang-en">
+      <h1>Business Proposal: Piggery Project</h1>
+      <h2>Kawai's Piggery — Commercial Piggery</h2>
+    </div>
+    <div class="meta">
+      <span class="pill">📍 Bulabod, Malinao, Aklan</span>
+      <span class="pill">💰 ₱2,000,000</span>
+      <span class="pill">🐖 40–60 heads</span>
+    </div>
+  </header>
+
+  <!-- I. Executive Summary -->
+  <div class="card">
+    <h3><span class="num">I</span><span class="lang-ja">エグゼクティブサマリー</span><span class="lang-en">Executive Summary</span></h3>
+    <div class="lang-ja">
+      <p>本計画書は、資本投資 <strong>₱2,000,000</strong> による中規模養豚事業の包括的な立ち上げ計画を提示するものです。本プロジェクトは、継続的な生産と収益を確保するため、<strong>繁殖（ブリーディング）</strong>と<strong>肥育（グロワー・フィニッシャー）</strong>の両事業に注力します。</p>
+      <p>フィリピンにおける豚肉需要は依然として高く、適切に運営すれば収益性の高い事業となります。効率的な給餌システム、厳格なバイオセキュリティ、適切な廃棄物管理を通じて、<strong>初年度内の持続可能性と収益性の達成</strong>を目指します。</p>
+    </div>
+    <div class="lang-en">
+      <p>This proposal presents a comprehensive plan to establish a medium-scale piggery business with a capital investment of <strong>₱2,000,000</strong>. The project focuses on both <strong>breeding</strong> and <strong>grower-finisher</strong> operations to ensure continuous production and income.</p>
+      <p>The demand for pork in the Philippines remains high, making this business a profitable venture when managed properly. Through efficient feeding systems, strict biosecurity, and proper waste management, the business aims to achieve <strong>sustainability and profitability within the first year</strong>.</p>
+    </div>
+  </div>
+
+  <!-- II. Business Description -->
+  <div class="card">
+    <h3><span class="num">II</span><span class="lang-ja">事業概要</span><span class="lang-en">Business Description</span></h3>
+    <div class="lang-ja">
+      <p>養豚事業は、環境・ゾーニング規制を遵守するため、農村部または半農村部に立地します。農場は、適切な排水・換気・衛生システムを備えた堅牢な豚舎で構成されます。繁殖母豚・子豚・肥育豚を含む構成とし、継続的な生産サイクルを確保します。事業は登録され、地方自治体および農業規制を遵守します。</p>
+      <div class="kv">
+        <div class="item"><div class="label">事業名</div><div class="val">Kawai's Piggery</div></div>
+        <div class="item"><div class="label">所在地</div><div class="val">Bulabod, Malinao, Aklan</div></div>
+        <div class="item"><div class="label">事業形態</div><div class="val">商業養豚</div></div>
+        <div class="item"><div class="label">飼育能力</div><div class="val">40–60頭（拡張可）</div></div>
+      </div>
+    </div>
+    <div class="lang-en">
+      <p>The piggery business will be located in a rural or semi-rural area to ensure compliance with environmental and zoning regulations. The farm will consist of well-constructed pig pens with proper drainage, ventilation, and sanitation systems. The operation will include breeder sows, piglets, and fattening pigs, ensuring a continuous production cycle. The business will be registered and comply with local government and agricultural regulations.</p>
+      <div class="kv">
+        <div class="item"><div class="label">Business Name</div><div class="val">Kawai's Piggery</div></div>
+        <div class="item"><div class="label">Location</div><div class="val">Bulabod, Malinao, Aklan</div></div>
+        <div class="item"><div class="label">Type</div><div class="val">Commercial Piggery</div></div>
+        <div class="item"><div class="label">Capacity</div><div class="val">40–60 heads (expandable)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- III. Objectives -->
+  <div class="card">
+    <h3><span class="num">III</span><span class="lang-ja">事業目標</span><span class="lang-en">Objectives</span></h3>
+    <ul class="lang-ja">
+      <li>食肉生産のための高品質な豚を生産する</li>
+      <li>1～2年以内に投資回収（ROI）を達成する</li>
+      <li>繁殖と再投資を通じて事業を拡大する</li>
+      <li>地域市場とバイヤーへの安定した供給網を確立する</li>
+      <li>持続可能で環境に配慮した農業実践を維持する</li>
+    </ul>
+    <ul class="lang-en">
+      <li>To produce high-quality pigs for meat production</li>
+      <li>To achieve return on investment within 1–2 years</li>
+      <li>To expand operations through breeding and reinvestment</li>
+      <li>To establish a reliable supply chain for local markets and buyers</li>
+      <li>To maintain sustainable and environmentally friendly farming practices</li>
+    </ul>
+  </div>
+
+  <!-- IV. Market Analysis -->
+  <div class="card">
+    <h3><span class="num">IV</span><span class="lang-ja">市場分析</span><span class="lang-en">Market Analysis</span></h3>
+    <div class="lang-ja">
+      <p>豚肉はフィリピンの家庭における主要なタンパク源であり、需要は引き続き堅調です。ターゲット顧客には、生鮮市場（ウェットマーケット）、精肉販売業者、レストラン、施設バイヤーが含まれます。裏庭養豚や大規模商業農場との競争はあるものの、本事業は品質生産・適切な衛生管理・直接マーケティング戦略によって差別化を図ります。</p>
+      <p><strong>ターゲット市場：</strong></p>
+      <ul><li>地域の生鮮市場</li><li>精肉販売業者</li><li>レストラン・小規模飲食事業</li></ul>
+      <p><strong>競争優位性：</strong></p>
+      <ul><li>適切な衛生管理とバイオセキュリティ</li><li>高品質な飼料と獣医ケア</li><li>バイヤーへの直接販売</li></ul>
+    </div>
+    <div class="lang-en">
+      <p>The demand for pork remains strong due to its role as a staple protein source in Filipino households. Target customers include wet markets, meat vendors, restaurants, and institutional buyers. Despite competition from backyard and commercial farms, this business will differentiate itself through quality production, proper sanitation, and direct marketing strategies.</p>
+      <p><strong>Target Market:</strong></p>
+      <ul><li>Local wet markets</li><li>Meat vendors</li><li>Restaurants and small food businesses</li></ul>
+      <p><strong>Competitive Advantage:</strong></p>
+      <ul><li>Proper sanitation and biosecurity</li><li>Quality feeds and veterinary care</li><li>Direct selling to buyers</li></ul>
+    </div>
+  </div>
+
+  <!-- V. Production Plan -->
+  <div class="card">
+    <h3><span class="num">V</span><span class="lang-ja">生産計画</span><span class="lang-en">Production Plan</span></h3>
+    <div class="lang-ja">
+      <p>農場は繁殖母豚と子豚を含む約40～60頭で開始します。母豚は5～6ヶ月ごとに子豚を出産し、継続的なサイクルを確保します。子豚は4～5ヶ月間飼育し、市場体重 <strong>90～110kg</strong> に達するまで肥育します。給餌は高品質な市販飼料を用いた体系的なプログラムに従います。定期的な獣医検診とワクチン接種プログラムを実施します。</p>
+      <p><strong>飼育計画：</strong></p>
+      <ul><li>繁殖母豚 5～10頭</li><li>種豚 1～2頭（または人工授精）</li><li>肥育用子豚 30～40頭</li></ul>
+      <p><strong>サイクル：</strong> 肥育期間 4～5ヶ月／目標体重 1頭あたり 90～110kg</p>
+    </div>
+    <div class="lang-en">
+      <p>The farm will start with approximately 40–60 heads, including breeder sows and piglets. Sows will produce piglets every 5–6 months, ensuring a continuous cycle. Piglets will be raised for 4–5 months until they reach market weight of <strong>90–110 kg</strong>. Feeding will follow a structured program using high-quality commercial feeds. Regular veterinary check-ups and vaccination programs will be implemented.</p>
+      <p><strong>Stocking Plan:</strong></p>
+      <ul><li>5–10 breeder sows</li><li>1–2 boars (or artificial insemination)</li><li>30–40 piglets for fattening</li></ul>
+      <p><strong>Cycle:</strong> Fattening period 4–5 months / Target weight 90–110 kg per pig</p>
+    </div>
+  </div>
+
+  <!-- VI. Facilities -->
+  <div class="card">
+    <h3><span class="num">VI</span><span class="lang-ja">施設・設備</span><span class="lang-en">Facilities & Equipment</span></h3>
+    <div class="lang-ja">
+      <p>本プロジェクトでは、耐久性と衛生面を考慮したコンクリート製豚舎を建設します。設備には給餌槽、自動・半自動給水システム、飼料保管庫、廃棄物管理システムが含まれます。廃棄物を効率的に管理し環境負荷を低減するため、浄化槽またはバイオガスシステムを使用します。</p>
+    </div>
+    <div class="lang-en">
+      <p>The project will include the construction of concrete pig pens designed for durability and sanitation. Facilities will include feeding troughs, automatic or semi-automatic water systems, storage for feeds, and waste management systems. A septic or biogas system will be used to manage waste efficiently and reduce environmental impact.</p>
+    </div>
+  </div>
+
+  <!-- VII. Budget -->
+  <div class="card">
+    <h3><span class="num">VII</span><span class="lang-ja">予算配分（₱2,000,000）</span><span class="lang-en">Budget Allocation (₱2,000,000)</span></h3>
+    <table>
+      <thead>
+        <tr>
+          <th><span class="lang-ja">項目</span><span class="lang-en">Category</span></th>
+          <th><span class="lang-ja">概算費用</span><span class="lang-en">Estimated Cost</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="lang-ja">土地造成／賃借</span><span class="lang-en">Land Preparation / Lease</span></td><td>₱200,000</td></tr>
+        <tr><td><span class="lang-ja">豚舎の建設</span><span class="lang-en">Construction of Pig Pens</span></td><td>₱600,000</td></tr>
+        <tr><td><span class="lang-ja">豚の購入（母豚・種豚・子豚）</span><span class="lang-en">Pig Stocks (Sows, Boar, Piglets)</span></td><td>₱400,000</td></tr>
+        <tr><td><span class="lang-ja">飼料（3～4ヶ月分）</span><span class="lang-en">Feeds (3–4 months supply)</span></td><td>₱400,000</td></tr>
+        <tr><td><span class="lang-ja">設備（給餌器・給水システム）</span><span class="lang-en">Equipment (feeders, water system)</span></td><td>₱100,000</td></tr>
+        <tr><td><span class="lang-ja">獣医・医薬品</span><span class="lang-en">Veterinary & Medicines</span></td><td>₱80,000</td></tr>
+        <tr><td><span class="lang-ja">人件費（3～6ヶ月）</span><span class="lang-en">Labor (3–6 months)</span></td><td>₱120,000</td></tr>
+        <tr><td><span class="lang-ja">光熱費・雑費</span><span class="lang-en">Utilities & Miscellaneous</span></td><td>₱100,000</td></tr>
+        <tr><td><span class="lang-ja">予備費</span><span class="lang-en">Contingency Fund</span></td><td>~₱100,000</td></tr>
+        <tr class="total"><td><span class="lang-ja">合計</span><span class="lang-en">Total</span></td><td>₱2,000,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- VIII. Revenue Projection -->
+  <div class="card">
+    <h3><span class="num">VIII</span><span class="lang-ja">収益予測</span><span class="lang-en">Revenue Projection</span></h3>
+    <div class="lang-ja">
+      <p><strong>計算例：</strong> 豚40頭 × 平均体重100kg × 販売単価 ₱180/kg</p>
+      <table>
+        <tr><td>総収入（グロス）／サイクル</td><td>₱720,000</td></tr>
+        <tr><td>推定経費／サイクル</td><td>₱400,000–500,000</td></tr>
+        <tr class="total"><td>純利益／サイクル</td><td>₱200,000–300,000</td></tr>
+      </table>
+      <div class="highlight">
+        <div class="big">年間 2～3サイクル可能</div>
+        想定年間純利益：₱400,000 ～ ₱900,000
+      </div>
+    </div>
+    <div class="lang-en">
+      <p><strong>Example Computation:</strong> 40 pigs × 100 kg average weight × ₱180/kg selling price</p>
+      <table>
+        <tr><td>Gross Income / cycle</td><td>₱720,000</td></tr>
+        <tr><td>Estimated Expenses / cycle</td><td>₱400,000–500,000</td></tr>
+        <tr class="total"><td>Net Profit / cycle</td><td>₱200,000–300,000</td></tr>
+      </table>
+      <div class="highlight">
+        <div class="big">2–3 cycles per year possible</div>
+        Projected annual net profit: ₱400,000 – ₱900,000
+      </div>
+    </div>
+  </div>
+
+  <!-- IX. Management Plan -->
+  <div class="card">
+    <h3><span class="num">IX</span><span class="lang-ja">管理計画</span><span class="lang-en">Management Plan</span></h3>
+    <div class="lang-ja">
+      <p>事業はオーナーが運営し、日々の業務・財務・マーケティングを統括します。農場作業員が給餌・清掃・メンテナンスを担当します。獣医には定期的に相談し、健康管理と疾病予防を行います。</p>
+      <ul><li><strong>オーナー／マネージャー：</strong>運営全般の統括</li><li><strong>農場作業員：</strong>日々の給餌・清掃</li><li><strong>獣医（非常勤）：</strong>健康モニタリング</li></ul>
+    </div>
+    <div class="lang-en">
+      <p>The business will be managed by the owner, who will oversee daily operations, finances, and marketing. Farm workers will handle feeding, cleaning, and maintenance. A veterinarian will be consulted regularly for health monitoring and disease prevention.</p>
+      <ul><li><strong>Owner/Manager:</strong> Oversees operations</li><li><strong>Farm Worker(s):</strong> Daily feeding, cleaning</li><li><strong>Veterinarian (part-time):</strong> Health monitoring</li></ul>
+    </div>
+  </div>
+
+  <!-- X. Risk Management -->
+  <div class="card">
+    <h3><span class="num">X</span><span class="lang-ja">リスク管理</span><span class="lang-en">Risk Management</span></h3>
+    <div class="lang-ja">
+      <p><strong>想定リスク：</strong></p>
+      <ul><li>疾病の発生（例：アフリカ豚熱 ASF）</li><li>飼料価格の高騰</li><li>市場価格の変動</li></ul>
+      <p><strong>対策：</strong></p>
+      <ul><li>厳格なバイオセキュリティ対策</li><li>信頼できる飼料サプライヤー</li><li>バイヤーの多様化</li></ul>
+    </div>
+    <div class="lang-en">
+      <p><strong>Possible Risks:</strong></p>
+      <ul><li>Disease outbreaks (e.g., ASF)</li><li>Feed price increase</li><li>Market price fluctuations</li></ul>
+      <p><strong>Solutions:</strong></p>
+      <ul><li>Strict biosecurity measures</li><li>Reliable feed suppliers</li><li>Diversified buyers</li></ul>
+    </div>
+  </div>
+
+  <!-- XI. Sustainability -->
+  <div class="card">
+    <h3><span class="num">XI</span><span class="lang-ja">持続可能性計画</span><span class="lang-en">Sustainability Plan</span></h3>
+    <div class="lang-ja">
+      <p>本事業は、適切な廃棄物処理や、堆肥・バイオガスとしての糞尿活用を含む環境配慮型の手法を採用します。これにより環境負荷を低減しつつ、農場の副産物から付加価値を生み出します。</p>
+      <ul><li>廃棄物をバイオガスや肥料に活用</li><li>適切な廃棄物処理の実践</li><li>清潔でエコフレンドリーな運営の維持</li></ul>
+    </div>
+    <div class="lang-en">
+      <p>The business will adopt environmentally friendly practices, including proper waste disposal and the use of manure as fertilizer or biogas. This approach reduces environmental impact while providing additional value from farm by-products.</p>
+      <ul><li>Use waste for biogas or fertilizer</li><li>Practice proper waste disposal</li><li>Maintain clean and eco-friendly operations</li></ul>
+    </div>
+  </div>
+
+  <!-- XII. Conclusion -->
+  <div class="card">
+    <h3><span class="num">XII</span><span class="lang-ja">結論</span><span class="lang-en">Conclusion</span></h3>
+    <div class="lang-ja">
+      <p>提案された養豚事業は、力強い成長ポテンシャルを持つ、実現可能で収益性の高い投資です。適切な計画、効率的な管理、ベストプラクティスの遵守により、長期的な持続可能性と成功を達成できます。<strong>₱2,000,000</strong> の予算で、本事業は高い収益性と成長の可能性を秘めています。効率的な管理、適切な衛生管理、戦略的マーケティングを通じて、本プロジェクトは持続可能でスケーラブルな農業事業へと成長できます。</p>
+    </div>
+    <div class="lang-en">
+      <p>The proposed piggery business is a viable and profitable investment with strong growth potential. With proper planning, efficient management, and adherence to best farming practices, the business can achieve long-term sustainability and success. With a budget of <strong>₱2,000,000</strong>, this piggery business has strong potential for profitability and growth. Through efficient management, proper sanitation, and strategic marketing, the project can become a sustainable and scalable agricultural enterprise.</p>
+    </div>
+  </div>
+
+  <footer>
+    <span class="lang-ja">Kawai's Piggery 事業計画書 · 日英対訳版</span>
+    <span class="lang-en">Kawai's Piggery Business Proposal · Bilingual Edition</span>
+  </footer>
+
+</div>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-en', lang==='en');
+  document.getElementById('btn-ja').classList.toggle('active', lang==='ja');
+  document.getElementById('btn-en').classList.toggle('active', lang==='en');
+}
+</script>
+</body>
+</html>
